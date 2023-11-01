@@ -1,7 +1,24 @@
-site_name: Basic MkDocs Example Project
+site_name: MVM Docs
+site_url: http://mvm-doc.readthedocs.io/
+site_description: Multi-language Verilation Methodology Framework Documentation
+site_author: BlueSpace, BOSC
+
+repo_url: https://gitee.com/beifengzhishen955/mvm-doc
+edit_url: /blob/main/docs/
+
 theme:
   name: readthedocs
   highlightjs: true
+
+nav:
+  - Home: index.md
+  - Installation: prepare.md
+  - Quick Started: quickstart.md
+  - Usage: usage.md
+  - Developer Guide: developer.md
+  - API: doxygen/html/
+  - About: about.md
+
 plugins:
   - search
   - mkdocstrings:
@@ -10,7 +27,13 @@ plugins:
         python:
           options:
             docstring_style: sphinx
+
 markdown_extensions:
   - markdown_include.include:
       base_path: .
   - admonition
+  - toc:
+      permalink: True
+      baselevel: 2
+
+copyright: Copyright &copy; 2023 <a href="https://etogaosion.github.io">BlueSpace</a> @ <a href="https://www.bosc.ac.cn">Beijing Institute of Open Source Chip</a>
