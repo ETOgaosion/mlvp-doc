@@ -8,11 +8,17 @@ date: 2023-11-01
 
 {!README.md!}
 
+**注意：本项目所有命令除非特殊说明都在项目主目录下运行**
+
 ## Installation and Configuration
 
 详细步骤及common issue请见[安装与配置章节](./prepare.md)
 
-命令如下：
+快速安装：在项目根目录运行
+
+```sh
+./scripts/prepare.md
+```
 
 ## Quick Start
 
@@ -44,9 +50,9 @@ gtkwave log/memory/Driver0/memory.vcd
 
 若对本项目感兴趣并希望深入了解相关架构与设计，请继续阅读。
 
-## Usage
+## Tutorial
 
-详细描述参考[使用说明章节](./usage.md)
+详细描述参考[使用说明章节](./tutorial.md)
 
 ## Developer Guide
 
@@ -54,4 +60,4 @@ gtkwave log/memory/Driver0/memory.vcd
 
 ## API Reference
 
-本项目使用doxygen构建基于注释的API查询的文档，请参阅[API文档](doxygen/html/index.html)
+本项目使用doxygen构建基于注释的API查询的文档，请参阅[API文档](./doxygen/html/index.html)

@@ -14,7 +14,7 @@ nav:
   - Home: index.md
   - Installation: prepare.md
   - Quick Started: quickstart.md
-  - Usage: usage.md
+  - Tutorial: tutorial.md
   - Developer Guide: developer.md
   - API: doxygen/html/
   - About: about.md
@@ -35,5 +35,11 @@ markdown_extensions:
   - toc:
       permalink: True
       baselevel: 2
+  - pymdownx.arithmatex
+
+extra_javascript:
+  # other extra java script
+  - static/mathjax-config.js
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 copyright: Copyright &copy; 2023 <a href="https://etogaosion.github.io">BlueSpace</a> @ <a href="https://www.bosc.ac.cn">Beijing Institute of Open Source Chip</a>
