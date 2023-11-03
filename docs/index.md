@@ -52,7 +52,7 @@ gtkwave log/memory/Driver0/memory.vcd
 
 ## Tutorial
 
-详细描述参考[使用说明章节](./tutorial.md)
+教程参考[教程章节](./tutorial.md)
 
 ## Developer Guide
 

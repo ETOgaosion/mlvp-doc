@@ -30,6 +30,7 @@ MVM将提供对两者使用友好的框架和工具
 - `Database`(`Databuffer`): 内存数据库/缓冲区，辅助多模块交互，完成数据解藕
 - `Sequencer`: 整合用户输入测试样例
     - `userTests`: [Verifier] 测试样例用户输入
+        - `TestGenerator`: [Verifier] 使用API生成测试样例
 - `Transaction`: 由用户测试样例准备事务数据库
 - `Spreader`: 根据测试序列的并行性要求发射事物给驱动线程
 - `Driver`: 驱动模块，最重要的设计
@@ -74,18 +75,12 @@ MVM将提供对两者使用友好的框架和工具
 |   |-- Reporter                // Reporter [component]
 |   |-- Sequencer               // Sequencer [component]
 |   |-- Spreader                // Spreader [component]
+|   |-- TestGenerator           // Generate tests multi-language tools
 |   `-- Transaction             // Transaction [component]
 |-- tests                   // Test everything
 |-- third-party             // Third party dependencies
 |   `-- include
 `-- tools                   // Neccessary tools for automation
-    `-- TestGenerator           // Generate tests multi-language tools
-        |-- include
-        `-- src
-            |-- cpp
-            |-- golang
-            |-- java
-            `-- python
 ```
 
 ## Methodology
@@ -144,7 +139,7 @@ MVM验证方法学如下：
 5. [Announcer] 实现`src/main.cpp`文件，使用新`[module]`的头文件实例化模板类，完成整个框架组件的连接，可参考现有文件
 6. [Verifier] 根据硬件描述和实现，使用高级语言编写Reference Model，文件已由Announcer生成，位于`include/RefPack/[Module]/[module].h`
     - 核心：实现`void eval() {}`函数
-7. [Verifier] 根据TestGenerator [API规范](#test-generator-api-tutorial)，编写`tools/TestGenerator/src/main.cpp`
+7. [Verifier] 根据TestGenerator [API规范](#test-generator-api-tutorial)，在`src/main.cpp`中编写测试样例
 8. [Verifier] 提交运行程序，生成正确性、覆盖率和性能报告，返回5进行优化或Debug
 9. [System] 向设计人员反馈结果
 
