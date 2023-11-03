@@ -54,6 +54,10 @@ MVM将提供对两者使用友好的框架和工具
 |-- data                    // User generate tests in json
 |-- doc                     // Documentaion
 |-- include                 // Header files, same structure with sources
+|   `-- MCVPack                 // DUT header files [component]
+|       `-- BareDut
+|           |-- Memory
+|           `-- Mux
 |-- log                     // Middle output
 |   `-- memory                  // Module name
 |       |-- Driver0                 // Driver threads output, waveforms are here
@@ -65,13 +69,6 @@ MVM将提供对两者使用友好的框架和工具
 |   |-- Database                // Database structure
 |   |-- Driver                  // Driver [component]
 |   |-- Library                 // Library functions
-|   |-- MCVPack                 // DUT [component]
-|   |   `-- BareDut
-|   |       |-- Memory
-|   |       `-- Mux
-|   |-- RefPack                 // REF [component]
-|   |   |-- Memory
-|   |   `-- Mux
 |   |-- Reporter                // Reporter [component]
 |   |-- Sequencer               // Sequencer [component]
 |   |-- Spreader                // Spreader [component]
@@ -124,22 +121,20 @@ MVM验证方法学如下：
 
 ### 实施步骤
 
-1. [Announcer] 明确测试需求，将测试单元放入`src/MCVPack/BareDut/[TestModule]`，在配置中输入测试单元名称和顶层模块
+1. [Announcer] 明确测试需求，将测试单元放入`design/[TestModule]`，在配置中输入测试单元名称和顶层模块
     - 暂时不支持配置
 2. [Announcer] 项目根目录运行verilator头文件生成脚本`./script/gencode.sh`
-    - 将`src/MCVPack/BareDut/[TestModule]`源文件的Verilog头文件生成
-    - 放入`include/MCVPack/BareDut/[TestModule]`
+    - Verilog头文件生成并放入`include/MCVPack/BareDut/[TestModule]`
 3. [Announcer] 项目根目录运行RefDriver/Ref接口生成脚本`python3 tools/generatePortsInfo.py`
     - 生成顶层模块接口信息放入`include/Database/designPortsGen.h`
-    - 生成用户Driver
-        - 暂不支持
-    - 生成Ref模板供第6步使用
-4. [Announcer] 根据模块运行逻辑编写DUT Driver，放在`[include|src]/MCVPack/BareDut/[TestModule]`下，命名为`[module]Driver.[h|cpp]`，Driver的编写参考`[include|src]/MCVPack/BareDut/Memory/memoryDriver.[h|cpp]`，并且参考[Verilator Example](https://github.com/verilator/verilator/tree/master/examples)
-    - 核心：实现`bool drivingStep() {}`函数
-5. [Announcer] 实现`src/main.cpp`文件，使用新`[module]`的头文件实例化模板类，完成整个框架组件的连接，可参考现有文件
-6. [Verifier] 根据硬件描述和实现，使用高级语言编写Reference Model，文件已由Announcer生成，位于`include/RefPack/[Module]/[module].h`
+4. [Announcer] 根据模块运行逻辑编写DUT Driver类，继承自`DutUnitDriver`(位于`include/Driver/dutUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`DutMemoryDriver`，并且参考[Verilator Example](https://github.com/verilator/verilator/tree/master/examples)
+    - 核心：实现`bool drivingStep() {}`函数，对DUT接口硬赋值
+5. [Verifier] 根据硬件描述和实现，使用高级语言编写Reference Model，继承自`Ref`类(位于`include/RefPack/ref.h`)，放在`src/main.cpp`中
     - 核心：实现`void eval() {}`函数
-7. [Verifier] 根据TestGenerator [API规范](#test-generator-api-tutorial)，在`src/main.cpp`中编写测试样例
+5. [Verifier] 根据硬件描述和实现，编写Ref Driver类，继承自`RefUnitDriver`类(位于`include/Driver/refUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`RefMemoryDriver`
+    - 核心：实现`void drivingStep() {}`函数
+7. [Verifier] 根据TestGenerator [API规范](#test-generator-api-tutorial)，在`src/main.cpp`主函数中编写测试样例
+5. [Verifier] 在`src/main.cpp`主函数中完成整个框架组件的连接，可参考现有文件
 8. [Verifier] 提交运行程序，生成正确性、覆盖率和性能报告，返回5进行优化或Debug
 9. [System] 向设计人员反馈结果
 

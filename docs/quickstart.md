@@ -15,7 +15,7 @@ date: 2023-11-01
 ./bin/build.sh
 
 # check raw system verilog file
-cat src/MCVPack/BareDut/Memory/memory.sv
+cat design/Memory/memory.sv
 
 # run test
 ./bin/mvm
