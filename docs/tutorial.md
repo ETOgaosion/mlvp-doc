@@ -160,8 +160,8 @@ MVM验证方法学如下：
 API:
 
 ```cpp
-bool addSerialTest(MVM::Sequencer::SerialTest testSet);
-bool addTestPoint(MVM::Sequencer::TestPoint test);
+bool addSerialTest(MVM::Type::SerialTest testSet);
+bool addTestPoint(MVM::Type::TestPoint test);
 ```
 
 分别对应输入二维测试序列的数据，和一维测试点的数据
