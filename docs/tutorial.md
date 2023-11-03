@@ -138,6 +138,7 @@ MVM验证方法学如下：
 8. [Verifier] 提交运行程序，生成正确性、覆盖率和性能报告，返回5进行优化或Debug
 9. [System] 向设计人员反馈结果
 
+在OVIP-UT主目录下执行`./mvm/scripts/build.sh`，即可编译生成文件
 
 ### Test Generator API Tutorial
 

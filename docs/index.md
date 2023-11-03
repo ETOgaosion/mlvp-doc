@@ -8,11 +8,12 @@ date: 2023-11-01
 
 {!README.md!}
 
-**注意：本项目所有命令除非特殊说明都在项目主目录下运行**
+**注意：本项目所有命令除非特殊说明都在MVM项目主目录下运行**
+**注意：本项目已经集成进[OVIP-UT](https://gitee.com/yaozhicheng/OVIP-UT/blob/master/src/cpp/tb_memory.cpp)**
 
 ## Installation and Configuration
 
-详细步骤及common issue请见[安装与配置章节](./prepare.md)
+详细步骤及common issue请见[安装与配置章节](./prepare.md)，其中本项目安装部分为必做
 
 快速安装：在项目根目录运行
 

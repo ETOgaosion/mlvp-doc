@@ -26,7 +26,7 @@ date: 2023-11-01
         - VirtualBox
 - Shell: zsh [recommanded]
 
-## Installation
+## Dependencies Installation
 
 ### 软件源
 
@@ -95,3 +95,31 @@ windows上其他平台使用X11与Linux通信
 安装运行[VcXsrc](https://sourceforge.net/projects/vcxsrv/)
 
 无需运行前述教程第二步，配置好后进行3/4步连接即可
+
+## Installation(必做)
+
+**注意：本项目所有命令除非特殊说明都在项目主目录下运行**
+**注意：本项目已经集成进[OVIP-UT](https://gitee.com/yaozhicheng/OVIP-UT)**
+
+打开终端，执行：
+
+```sh
+git clone https://gitee.com/yaozhicheng/OVIP-UT.git --recurse-submodules
+```
+
+确保`src/cpp`目录下`CMakeList.txt`中包含如下代码：
+
+```cmake
+add_definitions( -DUSE_THREADS=false )
+add_definitions( -DBUGDEGREE=Degree::LOW )
+
+add_executable(tb_memory tb_memory.cpp)
+target_link_libraries(tb_memory mvm-lib pthread)
+if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+    verilate(tb_memory SOURCES ${PROJECT_SOURCE_DIR}/mvm/design/Memory/memory.sv TOP_MODULE memory COVERAGE OPT_SLOW TRACE)
+else ()
+    verilate(tb_memory SOURCES ${PROJECT_SOURCE_DIR}/mvm/design/Memory/memory.sv TOP_MODULE memory COVERAGE OPT_FAST TRACE)
+endif ()
+```
+
+首先需要安装`mvm-lib`，在`mvm`主目录下执行`./scripts/build.sh install`，将会自动完成编译安装

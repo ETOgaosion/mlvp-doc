@@ -8,3 +8,6 @@ date: 2023-11-01
 
 # MVM开发者指南
 
+## 文档生成
+
+在MVM主目录运行`./scripts/docgen.sh`
