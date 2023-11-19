@@ -125,13 +125,13 @@ MVM验证方法学如下：
     - 暂时不支持配置
 2. [Announcer] 项目根目录运行verilator头文件生成脚本`./script/gencode.sh`
     - Verilog头文件生成并放入`include/MCVPack/BareDut/[TestModule]`
-3. [Announcer] 项目根目录运行RefDriver/Ref接口生成脚本`python3 tools/generatePortsInfo.py`
+3. [Announcer] 项目根目录运行RefDrivers/Ref接口生成脚本`python3 tools/generatePortsInfo.py`
     - 生成顶层模块接口信息放入`include/Database/designPortsGen.h`
-4. [Announcer] 根据模块运行逻辑编写DUT Driver类，继承自`DutUnitDriver`(位于`include/Driver/dutUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`DutMemoryDriver`，并且参考[Verilator Example](https://github.com/verilator/verilator/tree/master/examples)
+4. [Announcer] 根据模块运行逻辑编写DUT Driver类，继承自`DutUnitDriver`(位于`include/Drivers/dutUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`DutMemoryDriver`，并且参考[Verilator Example](https://github.com/verilator/verilator/tree/master/examples)
     - 核心：实现`bool drivingStep() {}`函数，对DUT接口硬赋值
 5. [Verifier] 根据硬件描述和实现，使用高级语言编写Reference Model，继承自`Ref`类(位于`include/RefPack/ref.h`)，放在`src/main.cpp`中
-    - 核心：实现`void eval() {}`函数
-5. [Verifier] 根据硬件描述和实现，编写Ref Driver类，继承自`RefUnitDriver`类(位于`include/Driver/refUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`RefMemoryDriver`
+    - 核心：实现`void exec() {}`函数
+5. [Verifier] 根据硬件描述和实现，编写Ref Driver类，继承自`RefUnitDriver`类(位于`include/Drivers/refUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`RefMemoryDriver`
     - 核心：实现`void drivingStep() {}`函数
 7. [Verifier] 根据TestGenerator [API规范](#test-generator-api-tutorial)，在`src/main.cpp`主函数中编写测试样例
 5. [Verifier] 在`src/main.cpp`主函数中完成整个框架组件的连接，可参考现有文件
