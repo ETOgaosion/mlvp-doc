@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7erefmemorydriver_14',['~RefMemoryDriver',['../classRefMemoryDriver.html#a1123aaa95b88d256c362cd60bc527a84',1,'RefMemoryDriver']]]
+  ['final_1582',['final',['../classVL__NOT__FINAL.html#ab1e83aa2b8ae7a0549acce23391d2194',1,'VL_NOT_FINAL::final()'],['../classVL__NOT__FINAL.html#ab1e83aa2b8ae7a0549acce23391d2194',1,'VL_NOT_FINAL::final()'],['../classVL__NOT__FINAL.html#ab1e83aa2b8ae7a0549acce23391d2194',1,'VL_NOT_FINAL::final()']]]
 ];

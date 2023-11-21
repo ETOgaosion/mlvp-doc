@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['wdata_31',['wdata',['../classRefMemory.html#a2e45e2d2f2acfce8960c9dcbef817635',1,'RefMemory']]],
-  ['wr_5fen_32',['wr_en',['../classRefMemory.html#ac6bf985f2db6cdbe8837b08753a00d5e',1,'RefMemory']]]
+  ['b_3754',['b',['../classVL__NOT__FINAL.html#a672881d749940a263f139f9451abe12a',1,'VL_NOT_FINAL']]]
 ];

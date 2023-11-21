@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['rd_5fen_28',['rd_en',['../classRefMemory.html#a8d6772ebf00a8c6511b11b676540d181',1,'RefMemory']]],
-  ['rdata_29',['rdata',['../classRefMemory.html#acb882de7d3c57b38d9a471a34953110d',1,'RefMemory']]],
-  ['reset_30',['reset',['../classRefMemory.html#a77e8e6997adbf9b46f338613a8a94049',1,'RefMemory']]]
+  ['a_3752',['a',['../classVL__NOT__FINAL.html#a245f8d6d90b277fc5de2d1a3c4b0e442',1,'VL_NOT_FINAL']]],
+  ['addr_3753',['addr',['../classRefMemory.html#a7c6cfb570570e4a3ba09b377ed16f826',1,'RefMemory::addr()'],['../classVL__NOT__FINAL.html#a7f7396baca35ad70b4df411d7d24fc12',1,'VL_NOT_FINAL::addr()']]]
 ];
