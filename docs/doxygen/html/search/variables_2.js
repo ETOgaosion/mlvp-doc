@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wdata_31',['wdata',['../classRefMemory.html#a8856256832be9600498d4b868b4095fa',1,'RefMemory']]],
-  ['wr_5fen_32',['wr_en',['../classRefMemory.html#aeb06381ce415e6b0784e4d0719da0771',1,'RefMemory']]]
+  ['wdata_31',['wdata',['../classRefMemory.html#a2e45e2d2f2acfce8960c9dcbef817635',1,'RefMemory']]],
+  ['wr_5fen_32',['wr_en',['../classRefMemory.html#ac6bf985f2db6cdbe8837b08753a00d5e',1,'RefMemory']]]
 ];

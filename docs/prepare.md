@@ -14,14 +14,14 @@ date: 2023-11-01
     - Ubuntu 20.04
     - MacOS host, remote/VM(System Ubuntu 20.04):
         - orbstack [recommanded]
-        - Linux server
+        - Linux remote server
         - docker
         - VMWare
         - VirtualBox
     - Windwos host, remote/VM(System Ubuntu 20.04):
         - WSL2 [recommanded]
         - WSL
-        - Linux server
+        - Linux remote server
         - VMWare
         - VirtualBox
 - Shell: zsh [recommanded]
@@ -32,12 +32,18 @@ date: 2023-11-01
 
 ```sh
 sudo apt update
-sudo apt install -y binutils python3 python3-pip git help2man \
+sudo apt install -y binutils gcc-10 g++-10 python3 python3-pip git help2man \
                     perl python3 make libfl2 libfl-dev zlibc zlib1g zlib1g-dev \
                     ccache mold libgoogle-perftools-dev numactl \
                     perl-doc autoconf flex bison clang clang-format \
                     cmake gdb graphviz lconv gtkwave unzip zip
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 10
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 10
 ```
+
+If you use VSCode CMake plugin, we suggest you use clang 10+ or g++-10 as compiler, press `command`(mac)/`ctrl`(windows) + `shift` + `P` and input `CMake: Select a kit`, and choose the one you like, **Notice that this project use C++ new features, must use 20 standards and new compiler version to support**.
 
 ### Verilator
 
