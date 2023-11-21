@@ -43,7 +43,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 10
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 10
 ```
 
-If you use VSCode CMake plugin, we suggest you use clang 10+ or g++-10 as compiler, press `command`(mac)/`ctrl`(windows) + `shift` + `P` and input `CMake: Select a kit`, and choose the one you like, **Notice that this project use C++ new features, must use 20 standards and new compiler version to support**.
+若您使用VSCode配合CMake插件，我们建议您使用Clang 10+或者g++-10作为编译器，具体操作方法：在项目中根目录按`command`(mac)/`ctrl`(windows) + `shift` + `P`，输入`CMake: Select a kit`，而后选择您希望是哟的编译器，**注意本项目使用了一些C++新特性，需要CXX-20标准以及新版本的编译器提供必要支持**。
 
 ### Verilator
 
