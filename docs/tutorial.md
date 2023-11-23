@@ -1,31 +1,31 @@
 ---
-title: MVM文档 - 教程
-summary: MVM Tutorial
+title: MLVP文档 - 教程
+summary: MLVP Tutorial
 authors:
     - BlueSpace
 date: 2023-11-01
 ---
 
-# MVM Tutorial
+# MLVP Tutorial
 
 ## User Group
 
-MVM的用户群体分为两种角色：
+MLVP的用户群体分为两种角色：
 
 - Announcer: 发布验证需求的社区管理者
 - Verifier: 参与验证的社区专家
 
-MVM将提供对两者使用友好的框架和工具
+MLVP将提供对两者使用友好的框架和工具
 
-## MVM Framework and Project Structure
+## MLVP Framework and Project Structure
 
 ### Framework
 
-当前版本MVM框架如下：
+当前版本MLVP框架如下：
 
-![framework](./img/MVM_BareDut.png)
+![framework](./img/MLVP_BareDut.png)
 
-由框架图可知，MVM框架由六个重要组件构成：
+由框架图可知，MLVP框架由六个重要组件构成：
 
 - `Database`(`Databuffer`): 内存数据库/缓冲区，辅助多模块交互，完成数据解藕
 - `Sequencer`: 整合用户输入测试样例
@@ -82,9 +82,9 @@ MVM将提供对两者使用友好的框架和工具
 
 ## Methodology
 
-MVM的方法学理论与UVM类似：根本目的是利用高度并行化的高效验证手段完成代码全覆盖单元测试，但具体任务与UVM截然不同，为两组用户便利，必须保证框架具有对所有单元测试的适用性，且API具有最佳的用户易用性
+MLVP的方法学理论与UVM类似：根本目的是利用高度并行化的高效验证手段完成代码全覆盖单元测试，但具体任务与UVM截然不同，为两组用户便利，必须保证框架具有对所有单元测试的适用性，且API具有最佳的用户易用性
 
-MVM验证方法学如下：
+MLVP验证方法学如下：
 
 ### 角色任务
 
@@ -138,7 +138,7 @@ MVM验证方法学如下：
 8. [Verifier] 提交运行程序，生成正确性、覆盖率和性能报告，返回5进行优化或Debug
 9. [System] 向设计人员反馈结果
 
-在OVIP-UT主目录下执行`./mvm/scripts/build.sh`，即可编译生成文件
+在OVIP-UT主目录下执行`./mlvp/scripts/build.sh`，即可编译生成文件
 
 ### Test Generator API Tutorial
 
@@ -151,8 +151,8 @@ MVM验证方法学如下：
 API:
 
 ```cpp
-bool addSerialTest(MVM::Type::SerialTest testSet);
-bool addTestPoint(MVM::Type::TestPoint test);
+bool addSerialTest(MLVP::Type::SerialTest testSet);
+bool addTestPoint(MLVP::Type::TestPoint test);
 ```
 
 分别对应输入二维测试序列的数据，和一维测试点的数据
@@ -173,7 +173,7 @@ bool addSerialTestsSet(std::vector<int> serialTestSize);
 
 ##### PortSpec Generator Model
 
-![PortSpec](./img/MVM_PortSpec.png)
+![PortSpec](./img/MLVP_PortSpec.png)
 
 按照端口和index设置输入模式，指定端口和index起始可设计模式，首先给出相关数据结构：
 

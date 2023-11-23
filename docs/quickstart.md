@@ -1,16 +1,16 @@
 ---
-title: MVM文档 - 快速上手
-summary: MVM Quick Start
+title: MLVP文档 - 快速上手
+summary: MLVP Quick Start
 authors:
     - BlueSpace
 date: 2023-11-01
 ---
 
-# MVM快速上手
+# MLVP快速上手
 
 ## Memory案例
 
-本项目由CMake构建，安装后在`MVM`目录下执行：
+本项目由CMake构建，安装后在`MLVP`目录下执行：
 
 ```sh
 # build file
@@ -20,7 +20,7 @@ date: 2023-11-01
 cat design/Memory/memory.sv
 
 # run test
-./bin/mvm
+./bin/mlvp
 
 # check total result
 cat report/memory/total.info
@@ -47,7 +47,7 @@ gtkwave log/memory/Driver0/memory.vcd
 在OVIP-UT项目`src/cpp`中添加实现，可参考`tb_memory.cpp`的实现，在OVIP-UT项目主目录执行：
 
 ```sh
-./mvm/scripts/build.sh
+./mlvp/scripts/build.sh
 ```
 
 将完成tb目标的构建，执行`./build/bin/[target]`即可运行，在`log/report`目录下查看波形/覆盖率报告

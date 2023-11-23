@@ -1,12 +1,12 @@
 ---
-title: MVM文档 - 安装与配置
-summary: MVM Preparation
+title: MLVP文档 - 安装与配置
+summary: MLVP Preparation
 authors:
     - BlueSpace
 date: 2023-11-01
 ---
 
-# MVM安装与配置
+# MLVP安装与配置
 
 ## Prerequests
 
@@ -121,12 +121,12 @@ add_definitions( -DUSE_THREADS=false )
 add_definitions( -DBUGDEGREE=Degree::LOW )
 
 add_executable(tb_memory tb_memory.cpp)
-target_link_libraries(tb_memory mvm-lib pthread)
+target_link_libraries(tb_memory mlvp-lib pthread)
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-    verilate(tb_memory SOURCES ${PROJECT_SOURCE_DIR}/mvm/design/Memory/memory.sv TOP_MODULE memory COVERAGE OPT_SLOW TRACE)
+    verilate(tb_memory SOURCES ${PROJECT_SOURCE_DIR}/mlvp/design/Memory/memory.sv TOP_MODULE memory COVERAGE OPT_SLOW TRACE)
 else ()
-    verilate(tb_memory SOURCES ${PROJECT_SOURCE_DIR}/mvm/design/Memory/memory.sv TOP_MODULE memory COVERAGE OPT_FAST TRACE)
+    verilate(tb_memory SOURCES ${PROJECT_SOURCE_DIR}/mlvp/design/Memory/memory.sv TOP_MODULE memory COVERAGE OPT_FAST TRACE)
 endif ()
 ```
 
-首先需要安装`mvm-lib`，在`mvm`主目录下执行`./scripts/build.sh install`，将会自动完成编译安装
+首先需要安装`mlvp-lib`，在`mlvp`主目录下执行`./scripts/build.sh install`，将会自动完成编译安装

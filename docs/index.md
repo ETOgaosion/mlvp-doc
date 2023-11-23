@@ -1,6 +1,6 @@
 ---
-title: MVM文档 - 首页
-summary: MVM Index
+title: MLVP文档 - 首页
+summary: MLVP Index
 authors:
     - BlueSpace
 date: 2023-11-01
@@ -8,7 +8,7 @@ date: 2023-11-01
 
 {!README.md!}
 
-**注意：本项目所有命令除非特殊说明都在MVM项目主目录下运行**
+**注意：本项目所有命令除非特殊说明都在MLVP项目主目录下运行**
 
 **注意：本项目已经集成进[OVIP-UT](https://gitee.com/yaozhicheng/OVIP-UT/blob/master/src/cpp/tb_memory.cpp)**
 
@@ -26,7 +26,7 @@ date: 2023-11-01
 
 前提：按照上一节完成环境安装与配置，详细说明见[Quick Start章节](./quickstart.md)
 
-本项目由CMake构建，安装后在`MVM`目录下执行：
+本项目由CMake构建，安装后在`MLVP`目录下执行：
 
 ```sh
 # build file
@@ -36,7 +36,7 @@ date: 2023-11-01
 cat design/Memory/memory.sv
 
 # run test
-./bin/mvm
+./bin/mlvp
 
 # check total result
 cat report/memory/total.info
