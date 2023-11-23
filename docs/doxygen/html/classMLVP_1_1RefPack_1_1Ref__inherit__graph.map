@@ -1,0 +1,5 @@
+<map id="MLVP::RefPack::Ref" name="MLVP::RefPack::Ref">
+<area shape="rect" id="Node000001" title="Use only when you want to implement a ref driven by cycles, transaction handler logic implemented in ..." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000002" href="$classRefCache.html" title="Ref Cache simulator." alt="" coords="37,79,121,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,44,81,79,76,79,76,44"/>
+</map>
