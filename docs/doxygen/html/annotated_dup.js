@@ -24,6 +24,9 @@ var annotated_dup =
       [ "Evaluator", null, [
         [ "Evaluator", "classMLVP_1_1Evaluator_1_1Evaluator.html", null ]
       ] ],
+      [ "Library", null, [
+        [ "RandomGenerator", "classMLVP_1_1Library_1_1RandomGenerator.html", null ]
+      ] ],
       [ "RefPack", null, [
         [ "Ref", "classMLVP_1_1RefPack_1_1Ref.html", "classMLVP_1_1RefPack_1_1Ref" ]
       ] ],
@@ -40,8 +43,8 @@ var annotated_dup =
       [ "TestGenerator", null, [
         [ "GeneratedUserTest", "classMLVP_1_1TestGenerator_1_1GeneratedUserTest.html", null ],
         [ "PortSpecGeneratorModel", "classMLVP_1_1TestGenerator_1_1PortSpecGeneratorModel.html", "classMLVP_1_1TestGenerator_1_1PortSpecGeneratorModel" ],
-        [ "PortTestSpec", "structMLVP_1_1TestGenerator_1_1PortTestSpec.html", null ],
-        [ "PortTestSpecDefault", "structMLVP_1_1TestGenerator_1_1PortTestSpecDefault.html", null ]
+        [ "PortTestSpec", "structMLVP_1_1TestGenerator_1_1PortTestSpec.html", "structMLVP_1_1TestGenerator_1_1PortTestSpec" ],
+        [ "PortTestSpecDefault", "structMLVP_1_1TestGenerator_1_1PortTestSpecDefault.html", "structMLVP_1_1TestGenerator_1_1PortTestSpecDefault" ]
       ] ],
       [ "Transaction", null, [
         [ "Transaction", "classMLVP_1_1Transaction_1_1Transaction.html", "classMLVP_1_1Transaction_1_1Transaction" ],
@@ -53,6 +56,10 @@ var annotated_dup =
       ] ]
     ] ],
     [ "DutCacheDriver", "classDutCacheDriver.html", "classDutCacheDriver" ],
+    [ "MemorySimulatorDriver", "classMemorySimulatorDriver.html", null ],
+    [ "MMIOSimulatorDriver", "classMMIOSimulatorDriver.html", null ],
     [ "RefCache", "classRefCache.html", "classRefCache" ],
-    [ "RefCacheDriver", "classRefCacheDriver.html", null ]
+    [ "RefCacheDriver", "classRefCacheDriver.html", null ],
+    [ "SimulatorMemory", "classSimulatorMemory.html", "classSimulatorMemory" ],
+    [ "SimulatorMMIO", "classSimulatorMMIO.html", "classSimulatorMMIO" ]
 ];

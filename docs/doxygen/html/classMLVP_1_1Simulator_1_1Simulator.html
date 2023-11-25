@@ -121,65 +121,43 @@ $(function(){initNavTree('classMLVP_1_1Simulator_1_1Simulator.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classMLVP_1_1Simulator_1_1Simulator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MLVP::Simulator::Simulator Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for MLVP::Simulator::Simulator:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classMLVP_1_1Simulator_1_1Simulator__inherit__graph.svg" width="296" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a638f2d6bc5f9233fa1177a21008f3e5b" id="r_a638f2d6bc5f9233fa1177a21008f3e5b"><td class="memItemLeft" align="right" valign="top"><a id="a638f2d6bc5f9233fa1177a21008f3e5b" name="a638f2d6bc5f9233fa1177a21008f3e5b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Simulator</b> (bool inConnectToRef)</td></tr>
-<tr class="separator:a638f2d6bc5f9233fa1177a21008f3e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01e3ee10734a270b3125c12dae63cda1" id="r_a01e3ee10734a270b3125c12dae63cda1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01e3ee10734a270b3125c12dae63cda1">assignInput</a> (MLVP::Type::PortsData inSignal)=0</td></tr>
-<tr class="memdesc:a01e3ee10734a270b3125c12dae63cda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign Input to <a class="el" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a>.  <br /></td></tr>
-<tr class="separator:a01e3ee10734a270b3125c12dae63cda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb672f0cdaeec08b6ad8280e623262c" id="r_a2fb672f0cdaeec08b6ad8280e623262c"><td class="memItemLeft" align="right" valign="top"><a id="a2fb672f0cdaeec08b6ad8280e623262c" name="a2fb672f0cdaeec08b6ad8280e623262c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Simulator</b> (bool inConnectToRef, std::string inName, std::shared_ptr&lt; ChannelsType &gt; inChannels, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html">MLVP::Transaction::Transaction</a> &gt; inTransaction)</td></tr>
+<tr class="separator:a2fb672f0cdaeec08b6ad8280e623262c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12bcd474edf64cffef4369dfac6cdd8b" id="r_a12bcd474edf64cffef4369dfac6cdd8b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12bcd474edf64cffef4369dfac6cdd8b">exec</a> ()=0</td></tr>
 <tr class="memdesc:a12bcd474edf64cffef4369dfac6cdd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use return value to check if transaction is done.  <br /></td></tr>
 <tr class="separator:a12bcd474edf64cffef4369dfac6cdd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a9cec1282366eaf1e4bbe4b23a064c6" id="r_a0a9cec1282366eaf1e4bbe4b23a064c6"><td class="memItemLeft" align="right" valign="top">virtual const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a9cec1282366eaf1e4bbe4b23a064c6">getOutput</a> ()=0</td></tr>
-<tr class="memdesc:a0a9cec1282366eaf1e4bbe4b23a064c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Output ports-data.  <br /></td></tr>
-<tr class="separator:a0a9cec1282366eaf1e4bbe4b23a064c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a822530f5de754a91f57a1d26346fb1b5" id="r_a822530f5de754a91f57a1d26346fb1b5"><td class="memItemLeft" align="right" valign="top"><a id="a822530f5de754a91f57a1d26346fb1b5" name="a822530f5de754a91f57a1d26346fb1b5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>connectToRef</b></td></tr>
+<tr class="separator:a822530f5de754a91f57a1d26346fb1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0838c4e21c6753cad75c2b304844e13" id="r_aa0838c4e21c6753cad75c2b304844e13"><td class="memItemLeft" align="right" valign="top"><a id="aa0838c4e21c6753cad75c2b304844e13" name="aa0838c4e21c6753cad75c2b304844e13"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:aa0838c4e21c6753cad75c2b304844e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab822b8cb394c0af5fcb7cba6b1051bed" id="r_ab822b8cb394c0af5fcb7cba6b1051bed"><td class="memItemLeft" align="right" valign="top"><a id="ab822b8cb394c0af5fcb7cba6b1051bed" name="ab822b8cb394c0af5fcb7cba6b1051bed"></a>
+std::shared_ptr&lt; ChannelsType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b></td></tr>
+<tr class="separator:ab822b8cb394c0af5fcb7cba6b1051bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b15ca88d3ffdbe11bdd74b26c7f8070" id="r_a9b15ca88d3ffdbe11bdd74b26c7f8070"><td class="memItemLeft" align="right" valign="top"><a id="a9b15ca88d3ffdbe11bdd74b26c7f8070" name="a9b15ca88d3ffdbe11bdd74b26c7f8070"></a>
+std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html">MLVP::Transaction::Transaction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>transaction</b></td></tr>
+<tr class="memdesc:a9b15ca88d3ffdbe11bdd74b26c7f8070"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;dest name, Channel&lt;DriverModel&gt;&gt; <br /></td></tr>
+<tr class="separator:a9b15ca88d3ffdbe11bdd74b26c7f8070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a01e3ee10734a270b3125c12dae63cda1" name="a01e3ee10734a270b3125c12dae63cda1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01e3ee10734a270b3125c12dae63cda1">&#9670;&#160;</a></span>assignInput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool MLVP::Simulator::Simulator::assignInput </td>
-          <td>(</td>
-          <td class="paramtype">MLVP::Type::PortsData&#160;</td>
-          <td class="paramname"><em>inSignal</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Assign Input to <a class="el" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a>. </p>
-<p>split input and execution, because in some cases response longer than 1 cycle</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">MLVP::Type::PortsData</td><td>inSignal </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true </dd>
-<dd>
-false </dd></dl>
-
-</div>
-</div>
 <a id="a12bcd474edf64cffef4369dfac6cdd8b" name="a12bcd474edf64cffef4369dfac6cdd8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12bcd474edf64cffef4369dfac6cdd8b">&#9670;&#160;</a></span>exec()</h2>
 
@@ -208,33 +186,7 @@ false </dd></dl>
 <dd>
 false </dd></dl>
 
-</div>
-</div>
-<a id="a0a9cec1282366eaf1e4bbe4b23a064c6" name="a0a9cec1282366eaf1e4bbe4b23a064c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a9cec1282366eaf1e4bbe4b23a064c6">&#9670;&#160;</a></span>getOutput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const MLVP::Type::PortsData &amp; MLVP::Simulator::Simulator::getOutput </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the Output ports-data. </p>
-<dl class="section return"><dt>Returns</dt><dd>const MLVP::Type::PortsData &amp; </dd></dl>
+<p>Implemented in <a class="el" href="classSimulatorMemory.html#af2ab6420c5fdf3827930120b97f7d43c">SimulatorMemory</a>, and <a class="el" href="classSimulatorMMIO.html#a0ee77ef56b8ab2dd2f48e3ce547e2889">SimulatorMMIO</a>.</p>
 
 </div>
 </div>

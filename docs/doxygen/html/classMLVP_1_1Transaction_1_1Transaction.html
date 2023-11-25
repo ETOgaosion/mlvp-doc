@@ -173,9 +173,9 @@ const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a3f9439dc82f308013361150d649a6042" id="r_a3f9439dc82f308013361150d649a6042"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f9439dc82f308013361150d649a6042">addRequest</a> (const std::string &amp;inSrc, const std::string &amp;inDest, bool fromRef)</td></tr>
 <tr class="memdesc:a3f9439dc82f308013361150d649a6042"><td class="mdescLeft">&#160;</td><td class="mdescRight">recommended method to add a inter-module request  <br /></td></tr>
 <tr class="separator:a3f9439dc82f308013361150d649a6042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefb59740b0dec09315b7be347a890d67" id="r_aefb59740b0dec09315b7be347a890d67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefb59740b0dec09315b7be347a890d67">addResponse</a> (<a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;req, MLVP::Type::PortsData outSignal, bool fromRef)</td></tr>
-<tr class="memdesc:aefb59740b0dec09315b7be347a890d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">add response to a request  <br /></td></tr>
-<tr class="separator:aefb59740b0dec09315b7be347a890d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5990cc88bcd3a1c247bbf54f18fcc6dd" id="r_a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5990cc88bcd3a1c247bbf54f18fcc6dd">addResponse</a> (<a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;req, MLVP::Type::PortsData outSignal, bool fromRef, bool burst)</td></tr>
+<tr class="memdesc:a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">add response to a request  <br /></td></tr>
+<tr class="separator:a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2137c48d942e2bf5f532d6865c2c114b" id="r_a2137c48d942e2bf5f532d6865c2c114b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2137c48d942e2bf5f532d6865c2c114b">checkRequest</a> (const std::string &amp;src, const std::string &amp;dest, bool fromRef, bool &amp;totalNumber)</td></tr>
 <tr class="memdesc:a2137c48d942e2bf5f532d6865c2c114b"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether there is a request from src to dest  <br /></td></tr>
 <tr class="separator:a2137c48d942e2bf5f532d6865c2c114b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,9 +185,9 @@ const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:af4164cabd320e174ef91204cbfb90d67" id="r_af4164cabd320e174ef91204cbfb90d67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4164cabd320e174ef91204cbfb90d67">checkRequestNumber</a> (const std::string &amp;src, const std::string &amp;dest, bool fromRef)</td></tr>
 <tr class="memdesc:af4164cabd320e174ef91204cbfb90d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">get request number  <br /></td></tr>
 <tr class="separator:af4164cabd320e174ef91204cbfb90d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65124e12fde1195ba2ae38eb7640122d" id="r_a65124e12fde1195ba2ae38eb7640122d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMLVP_1_1Transaction_1_1TransactionResp.html">TransactionResp</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65124e12fde1195ba2ae38eb7640122d">getResponse</a> (const std::string &amp;src, const std::string &amp;dest, int reqId, bool fromRef)</td></tr>
-<tr class="memdesc:a65124e12fde1195ba2ae38eb7640122d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Response object.  <br /></td></tr>
-<tr class="separator:a65124e12fde1195ba2ae38eb7640122d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d52111673b5e0ddaf429ede95f4c169" id="r_a9d52111673b5e0ddaf429ede95f4c169"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMLVP_1_1Transaction_1_1TransactionResp.html">TransactionResp</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d52111673b5e0ddaf429ede95f4c169">getResponse</a> (const std::string &amp;src, const std::string &amp;dest, int reqId, int respId, bool fromRef)</td></tr>
+<tr class="memdesc:a9d52111673b5e0ddaf429ede95f4c169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Response object.  <br /></td></tr>
+<tr class="separator:a9d52111673b5e0ddaf429ede95f4c169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4779051438427a73c58444096dc2bef9" id="r_a4779051438427a73c58444096dc2bef9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4779051438427a73c58444096dc2bef9">checkResponseExistence</a> (const std::string &amp;src, const std::string &amp;dest, int index, bool fromRef)</td></tr>
 <tr class="memdesc:a4779051438427a73c58444096dc2bef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the response exist.  <br /></td></tr>
 <tr class="separator:a4779051438427a73c58444096dc2bef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,12 +222,12 @@ Public Attributes</h2></td></tr>
 <a class="el" href="classMLVP_1_1Transaction_1_1TransactionTop.html">TransactionTop</a>&#160;</td><td class="memItemRight" valign="bottom"><b>transactionItems</b></td></tr>
 <tr class="memdesc:a13ecc6813cfd797a5aa52469fa4fb039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top level transaction interface, no interact with other modules. <br /></td></tr>
 <tr class="separator:a13ecc6813cfd797a5aa52469fa4fb039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe820d067d27255e963c94b780ec331b" id="r_abe820d067d27255e963c94b780ec331b"><td class="memItemLeft" align="right" valign="top"><a id="abe820d067d27255e963c94b780ec331b" name="abe820d067d27255e963c94b780ec331b"></a>
-std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::pair&lt; <a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a>, std::optional&lt; <a class="el" href="structMLVP_1_1Transaction_1_1TransactionResp.html">TransactionResp</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dutUserTransactions</b></td></tr>
-<tr class="separator:abe820d067d27255e963c94b780ec331b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72e9ceb1444d9263746db73f2b05b98" id="r_ae72e9ceb1444d9263746db73f2b05b98"><td class="memItemLeft" align="right" valign="top"><a id="ae72e9ceb1444d9263746db73f2b05b98" name="ae72e9ceb1444d9263746db73f2b05b98"></a>
-std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::pair&lt; <a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a>, std::optional&lt; <a class="el" href="structMLVP_1_1Transaction_1_1TransactionResp.html">TransactionResp</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>refUserTransactions</b></td></tr>
-<tr class="separator:ae72e9ceb1444d9263746db73f2b05b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5b50ea6738816194be5dab50c85ff9" id="r_a0b5b50ea6738816194be5dab50c85ff9"><td class="memItemLeft" align="right" valign="top"><a id="a0b5b50ea6738816194be5dab50c85ff9" name="a0b5b50ea6738816194be5dab50c85ff9"></a>
+std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::pair&lt; <a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a>, std::vector&lt; <a class="el" href="structMLVP_1_1Transaction_1_1TransactionResp.html">TransactionResp</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dutUserTransactions</b></td></tr>
+<tr class="separator:a0b5b50ea6738816194be5dab50c85ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf93dbe8016f4b847a02cd3e92fa31e6" id="r_abf93dbe8016f4b847a02cd3e92fa31e6"><td class="memItemLeft" align="right" valign="top"><a id="abf93dbe8016f4b847a02cd3e92fa31e6" name="abf93dbe8016f4b847a02cd3e92fa31e6"></a>
+std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::pair&lt; <a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a>, std::vector&lt; <a class="el" href="structMLVP_1_1Transaction_1_1TransactionResp.html">TransactionResp</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>refUserTransactions</b></td></tr>
+<tr class="separator:abf93dbe8016f4b847a02cd3e92fa31e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html" title="Transaction class, which is used to store the information of a transaction.">Transaction</a> class, which is used to store the information of a transaction. </p>
@@ -327,8 +327,8 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
 
 </div>
 </div>
-<a id="aefb59740b0dec09315b7be347a890d67" name="aefb59740b0dec09315b7be347a890d67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefb59740b0dec09315b7be347a890d67">&#9670;&#160;</a></span>addResponse()</h2>
+<a id="a5990cc88bcd3a1c247bbf54f18fcc6dd" name="a5990cc88bcd3a1c247bbf54f18fcc6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5990cc88bcd3a1c247bbf54f18fcc6dd">&#9670;&#160;</a></span>addResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +349,13 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>fromRef</em>&#160;</td>
+          <td class="paramname"><em>fromRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>burst</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -656,8 +662,8 @@ false not same </dd></dl>
 
 </div>
 </div>
-<a id="a65124e12fde1195ba2ae38eb7640122d" name="a65124e12fde1195ba2ae38eb7640122d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65124e12fde1195ba2ae38eb7640122d">&#9670;&#160;</a></span>getResponse()</h2>
+<a id="a9d52111673b5e0ddaf429ede95f4c169" name="a9d52111673b5e0ddaf429ede95f4c169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d52111673b5e0ddaf429ede95f4c169">&#9670;&#160;</a></span>getResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,6 +692,12 @@ false not same </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>respId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>fromRef</em>&#160;</td>
         </tr>
@@ -708,6 +720,7 @@ false not same </dd></dl>
     <tr><td class="paramname">src</td><td></td></tr>
     <tr><td class="paramname">dest</td><td></td></tr>
     <tr><td class="paramname">reqId</td><td></td></tr>
+    <tr><td class="paramname">respId</td><td></td></tr>
     <tr><td class="paramname">fromRef</td><td></td></tr>
   </table>
   </dd>

@@ -121,20 +121,22 @@ $(function(){initNavTree('main_8cpp.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="channel_8h_source.html">Channel/channel.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="driver_8h_source.html">Drivers/driver.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="driverModel_8h_source.html">Drivers/driverModel.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="refDriver_8h_source.html">Drivers/refDriver.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="simulatorDriver_8h_source.html">Drivers/simulatorDriver.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">Library/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ref_8h_source.html">RefPack/ref.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="reporter_8h_source.html">Reporter/reporter.h</a>&quot;</code><br />
 <code>#include &quot;Transaction/transaction.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="mlvp_8h_source.html">mlvp.h</a>&quot;</code><br />
 <code>#include &quot;MCVPack/BareDut/NutshellCache/Vnutshellcache.h&quot;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
@@ -155,9 +157,56 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRefCacheDriver.html">RefCacheDriver</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RefUnitDriver, use a ref class to simulate the dut logic.  <a href="classRefCacheDriver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulatorMemory.html">SimulatorMemory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulator Memory and MMIO.  <a href="classSimulatorMemory.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulatorMMIO.html">SimulatorMMIO</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemorySimulatorDriver.html">MemorySimulatorDriver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMMIOSimulatorDriver.html">MMIOSimulatorDriver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a34a78e2c3b9f389d18b63db5a79c6180" id="r_a34a78e2c3b9f389d18b63db5a79c6180"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34a78e2c3b9f389d18b63db5a79c6180">SimpleBusCmd</a> : Data { <br />
+&#160;&#160;<a class="el" href="#a34a78e2c3b9f389d18b63db5a79c6180aecae13117d6f0584c25a9da6c8f8415e">read</a> = 0b0000
+, <b>write</b> = 0b0001
+, <b>readBurst</b> = 0b0010
+, <b>writeBurst</b> = 0b0011
+, <br />
+&#160;&#160;<b>writeLast</b> = 0b0111
+, <b>prob</b> = 0b1000
+, <b>prefetch</b> = 0b0100
+, <a class="el" href="#a34a78e2c3b9f389d18b63db5a79c6180a41d19b634a54efa34189d3c072d843ba">readLast</a> = 0b0110
+, <br />
+&#160;&#160;<b>writeResp</b> = 0b0101
+, <b>probHit</b> = 0b1100
+, <b>probeMiss</b> = 0b1000
+<br />
+ }</td></tr>
+<tr class="memdesc:a34a78e2c3b9f389d18b63db5a79c6180"><td class="mdescLeft">&#160;</td><td class="mdescRight">SimpleBusCmd.  <a href="#a34a78e2c3b9f389d18b63db5a79c6180">More...</a><br /></td></tr>
+<tr class="separator:a34a78e2c3b9f389d18b63db5a79c6180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c89468c7e4e1af3aa03a75a999cb682" id="r_a8c89468c7e4e1af3aa03a75a999cb682"><td class="memItemLeft" align="right" valign="top"><a id="a8c89468c7e4e1af3aa03a75a999cb682" name="a8c89468c7e4e1af3aa03a75a999cb682"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c89468c7e4e1af3aa03a75a999cb682">TestPoint</a> { <br />
+&#160;&#160;<b>READ_ONCE</b>
+, <b>READ_MEMORY</b>
+, <b>WRITE_MEMORY</b>
+, <b>READWRITE_MEMORY</b>
+, <br />
+&#160;&#160;<b>MMIO</b>
+, <b>RESET</b>
+, <b>SEQ</b>
+, <b>ALL</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a8c89468c7e4e1af3aa03a75a999cb682"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use an enum to describe tests functions. <br /></td></tr>
+<tr class="separator:a8c89468c7e4e1af3aa03a75a999cb682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a7c31b780ec0b7bd37ce6bfc897f70f64" id="r_a7c31b780ec0b7bd37ce6bfc897f70f64"><td class="memItemLeft" align="right" valign="top">const shared_ptr&lt; SerialTestSet &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c31b780ec0b7bd37ce6bfc897f70f64">generateTest</a> (<a class="el" href="#a8c89468c7e4e1af3aa03a75a999cb682">TestPoint</a> testPoint)</td></tr>
+<tr class="memdesc:a7c31b780ec0b7bd37ce6bfc897f70f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">We recommend you use a function to encapsulation your tests generation.  <br /></td></tr>
+<tr class="separator:a7c31b780ec0b7bd37ce6bfc897f70f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +216,73 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-11-24</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a34a78e2c3b9f389d18b63db5a79c6180" name="a34a78e2c3b9f389d18b63db5a79c6180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a78e2c3b9f389d18b63db5a79c6180">&#9670;&#160;</a></span>SimpleBusCmd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a34a78e2c3b9f389d18b63db5a79c6180">SimpleBusCmd</a> : <a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">Data</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SimpleBusCmd. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a34a78e2c3b9f389d18b63db5a79c6180aecae13117d6f0584c25a9da6c8f8415e" name="a34a78e2c3b9f389d18b63db5a79c6180aecae13117d6f0584c25a9da6c8f8415e"></a>read&#160;</td><td class="fielddoc"><p>req </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34a78e2c3b9f389d18b63db5a79c6180a41d19b634a54efa34189d3c072d843ba" name="a34a78e2c3b9f389d18b63db5a79c6180a41d19b634a54efa34189d3c072d843ba"></a>readLast&#160;</td><td class="fielddoc"><p>resp </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a7c31b780ec0b7bd37ce6bfc897f70f64" name="a7c31b780ec0b7bd37ce6bfc897f70f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c31b780ec0b7bd37ce6bfc897f70f64">&#9670;&#160;</a></span>generateTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const shared_ptr&lt; SerialTestSet &gt; &amp; generateTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a8c89468c7e4e1af3aa03a75a999cb682">TestPoint</a>&#160;</td>
+          <td class="paramname"><em>testPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>We recommend you use a function to encapsulation your tests generation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">testPoint</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const shared_ptr&lt;SerialTestSet&gt;&amp; </dd></dl>
+<p>instance the models</p>
+<p>add ports default spec direct input value is the default value</p>
+<p>random generator value is the bit width</p>
+<p>add ports detailed spec</p>
+<p>endIndex can be negative to count down value, convinient isn't it? for random generator mode, first element of vector is max value</p>
+<p>a trick: sv use cmd[3:1] == 3'b000, so only last elements is random, whole value can only be 0 or 1</p>
+<p>a trick: use constrain to filter value is too slow, may retry many timers, use post handler is much faster, one time generate</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

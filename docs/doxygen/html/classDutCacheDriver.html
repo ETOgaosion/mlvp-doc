@@ -148,6 +148,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DutUnitDriver</b> (std::string inUnitName, int inDriverID, const std::string &amp;inLogPath)</td></tr>
 <tr class="separator:a7e60f31136d8a3f09bf2bd13c9ecc60d inherit pub_methods_classMLVP_1_1Driver_1_1DutUnitDriver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classMLVP_1_1Driver_1_1DriverModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a></td></tr>
+<tr class="memitem:a681253def873fa8cda57f5cb560b171c inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel" id="r_a681253def873fa8cda57f5cb560b171c"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> ()=default</td></tr>
+<tr class="memdesc:a681253def873fa8cda57f5cb560b171c inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;dest name, Channel&lt;DriverModel&gt;&gt; <br /></td></tr>
+<tr class="separator:a681253def873fa8cda57f5cb560b171c inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d6b7da4ff0fcac2941771dc770ca1f inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel" id="r_ac1d6b7da4ff0fcac2941771dc770ca1f"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> (std::string inName)</td></tr>
 <tr class="separator:ac1d6b7da4ff0fcac2941771dc770ca1f inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,7 +198,6 @@ std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.
 <tr class="separator:aaeff84849b6a85e9e08b0785b785971a inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addbb1e6c3ccb4e315693aca70b262896 inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel" id="r_addbb1e6c3ccb4e315693aca70b262896"><td class="memItemLeft" align="right" valign="top">
 std::map&lt; std::pair&lt; std::string, std::string &gt;, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Channel_1_1Channel.html">MLVP::Channel::Channel</a>&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b></td></tr>
-<tr class="memdesc:addbb1e6c3ccb4e315693aca70b262896 inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;dest name, Channel&lt;DriverModel&gt;&gt; <br /></td></tr>
 <tr class="separator:addbb1e6c3ccb4e315693aca70b262896 inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -231,8 +234,8 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::shared_ptr&lt; <a
   </tr>
 </table>
 </div><div class="memdoc">
-<p>&lt; [notice] &gt; randReset(other value) can cause error, because our first posedge is delayed 1 cycle</p>
-<p>&lt; this should be called after trace</p>
+<p>[notice] &gt; randReset(other value) can cause error, because our first posedge is delayed 1 cycle</p>
+<p>this should be called after trace</p>
 
 </div>
 </div>
@@ -262,17 +265,20 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::shared_ptr&lt; <a
 </div><div class="memdoc">
 
 <p>just execute one cycle </p>
-<p>&lt; assign input signals c_if</p>
-<p>&lt; in_if</p>
-<p>&lt; mem_if</p>
-<p>&lt; coh_if</p>
-<p>&lt; mmio_if</p>
-<p>&lt; evaluate model</p>
-<p>&lt; generate trace</p>
-<p>&lt; assign output signals c_if</p>
-<p>&lt; in_if</p>
-<p>&lt; don't know why tfp dump lose last cycle</p>
-<p>&lt; output coverage</p>
+<p>assign input signals c_if</p>
+<p>in_if</p>
+<p>mem_if</p>
+<p>coh_if</p>
+<p>mmio_if</p>
+<p>evaluate model</p>
+<p>generate trace</p>
+<p>assign output signals c_if</p>
+<p>in_if</p>
+<p>mem_if</p>
+<p>mmio_if</p>
+<p>don't know why tfp dump lose last cycle</p>
+<p>output coverage</p>
+<p>reach test end</p>
 
 <p>Implements <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a>.</p>
 

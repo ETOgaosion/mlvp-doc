@@ -1,5 +1,9 @@
 <map id="MLVP::Driver::SimulatorDriver" name="MLVP::Driver::SimulatorDriver">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,221,104"/>
-<area shape="rect" id="Node000002" href="$classMLVP_1_1Driver_1_1DriverModel.html" title=" " alt="" coords="17,5,210,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,44,116,79,111,79,111,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,79,292,104"/>
+<area shape="rect" id="Node000003" href="$classMMIOSimulatorDriver.html" title=" " alt="" coords="5,152,168,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,114,104,154,101,150,156,110"/>
+<area shape="rect" id="Node000004" href="$classMemorySimulatorDriver.html" title=" " alt="" coords="192,152,371,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,110,267,150,264,154,209,114"/>
+<area shape="rect" id="Node000002" href="$classMLVP_1_1Driver_1_1DriverModel.html" title=" " alt="" coords="87,5,281,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,44,187,79,181,79,181,44"/>
 </map>

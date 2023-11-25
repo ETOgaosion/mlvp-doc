@@ -130,34 +130,43 @@ $(function(){initNavTree('simulator_8h_source.html',''); initResizable(); });
 <a href="simulator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">Library/types.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>MLVP::Simulator {</div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classMLVP_1_1Simulator_1_1Simulator.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> connectToRef;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">Library/types.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="driverModel_8h.html">Drivers/driverModel.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="channel_8h.html">Channel/channel.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;Transaction/transaction.h&quot;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">~Simulator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span>MLVP::Simulator {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">typedef</span> std::map&lt;std::pair&lt;std::string, std::string&gt;, std::shared_ptr&lt;MLVP::Channel::Channel&lt;MLVP::Driver::DriverModel&gt;&gt;&gt; ChannelsType;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a>(<span class="keywordtype">bool</span> inConnectToRef) : connectToRef(inConnectToRef) {}</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classMLVP_1_1Simulator_1_1Simulator.html#a01e3ee10734a270b3125c12dae63cda1">   36</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classMLVP_1_1Simulator_1_1Simulator.html#a01e3ee10734a270b3125c12dae63cda1">assignInput</a>(MLVP::Type::PortsData inSignal) = 0;</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classMLVP_1_1Simulator_1_1Simulator.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">bool</span> connectToRef;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::string name;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::shared_ptr&lt;ChannelsType&gt; channels; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classMLVP_1_1Simulator_1_1Simulator.html#a9b15ca88d3ffdbe11bdd74b26c7f8070">   32</a></span>    std::shared_ptr&lt;MLVP::Transaction::Transaction&gt; <a class="code hl_variable" href="classMLVP_1_1Simulator_1_1Simulator.html#a9b15ca88d3ffdbe11bdd74b26c7f8070">transaction</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">~Simulator</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classMLVP_1_1Simulator_1_1Simulator.html#a12bcd474edf64cffef4369dfac6cdd8b">   44</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classMLVP_1_1Simulator_1_1Simulator.html#a12bcd474edf64cffef4369dfac6cdd8b">exec</a>() = 0;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classMLVP_1_1Simulator_1_1Simulator.html#a0a9cec1282366eaf1e4bbe4b23a064c6">   51</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> MLVP::Type::PortsData &amp;<a class="code hl_function" href="classMLVP_1_1Simulator_1_1Simulator.html#a0a9cec1282366eaf1e4bbe4b23a064c6">getOutput</a>() = 0;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classMLVP_1_1Simulator_1_1Simulator.html">Simulator</a>(<span class="keywordtype">bool</span> inConnectToRef, std::string inName, std::shared_ptr&lt;ChannelsType&gt; inChannels, std::shared_ptr&lt;MLVP::Transaction::Transaction&gt; inTransaction) : connectToRef(inConnectToRef), name(std::move(inName)), channels(std::move(inChannels)), <a class="code hl_variable" href="classMLVP_1_1Simulator_1_1Simulator.html#a9b15ca88d3ffdbe11bdd74b26c7f8070">transaction</a>(std::move(inTransaction)) {}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classMLVP_1_1Simulator_1_1Simulator.html#a12bcd474edf64cffef4369dfac6cdd8b">   46</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classMLVP_1_1Simulator_1_1Simulator.html#a12bcd474edf64cffef4369dfac6cdd8b">exec</a>() = 0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-<div class="ttc" id="aclassMLVP_1_1Simulator_1_1Simulator_html"><div class="ttname"><a href="classMLVP_1_1Simulator_1_1Simulator.html">MLVP::Simulator::Simulator</a></div><div class="ttdef"><b>Definition</b> simulator.h:18</div></div>
-<div class="ttc" id="aclassMLVP_1_1Simulator_1_1Simulator_html_a01e3ee10734a270b3125c12dae63cda1"><div class="ttname"><a href="classMLVP_1_1Simulator_1_1Simulator.html#a01e3ee10734a270b3125c12dae63cda1">MLVP::Simulator::Simulator::assignInput</a></div><div class="ttdeci">virtual bool assignInput(MLVP::Type::PortsData inSignal)=0</div><div class="ttdoc">Assign Input to Simulator.</div></div>
-<div class="ttc" id="aclassMLVP_1_1Simulator_1_1Simulator_html_a0a9cec1282366eaf1e4bbe4b23a064c6"><div class="ttname"><a href="classMLVP_1_1Simulator_1_1Simulator.html#a0a9cec1282366eaf1e4bbe4b23a064c6">MLVP::Simulator::Simulator::getOutput</a></div><div class="ttdeci">virtual const MLVP::Type::PortsData &amp; getOutput()=0</div><div class="ttdoc">Get the Output ports-data.</div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="ttc" id="achannel_8h_html"><div class="ttname"><a href="channel_8h.html">channel.h</a></div></div>
+<div class="ttc" id="aclassMLVP_1_1Simulator_1_1Simulator_html"><div class="ttname"><a href="classMLVP_1_1Simulator_1_1Simulator.html">MLVP::Simulator::Simulator</a></div><div class="ttdef"><b>Definition</b> simulator.h:27</div></div>
 <div class="ttc" id="aclassMLVP_1_1Simulator_1_1Simulator_html_a12bcd474edf64cffef4369dfac6cdd8b"><div class="ttname"><a href="classMLVP_1_1Simulator_1_1Simulator.html#a12bcd474edf64cffef4369dfac6cdd8b">MLVP::Simulator::Simulator::exec</a></div><div class="ttdeci">virtual bool exec()=0</div><div class="ttdoc">Use return value to check if transaction is done.</div></div>
+<div class="ttc" id="aclassMLVP_1_1Simulator_1_1Simulator_html_a9b15ca88d3ffdbe11bdd74b26c7f8070"><div class="ttname"><a href="classMLVP_1_1Simulator_1_1Simulator.html#a9b15ca88d3ffdbe11bdd74b26c7f8070">MLVP::Simulator::Simulator::transaction</a></div><div class="ttdeci">std::shared_ptr&lt; MLVP::Transaction::Transaction &gt; transaction</div><div class="ttdoc">&lt;dest name, Channel&lt;DriverModel&gt;&gt;</div><div class="ttdef"><b>Definition</b> simulator.h:32</div></div>
+<div class="ttc" id="adriverModel_8h_html"><div class="ttname"><a href="driverModel_8h.html">driverModel.h</a></div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

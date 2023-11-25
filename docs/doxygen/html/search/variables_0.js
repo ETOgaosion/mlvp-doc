@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['channels_0',['channels',['../classMLVP_1_1Driver_1_1DriverModel.html#addbb1e6c3ccb4e315693aca70b262896',1,'MLVP::Driver::DriverModel::channels'],['../classMLVP_1_1RefPack_1_1Ref.html#a838bfcd8fa5e3a89acbb792516798488',1,'MLVP::RefPack::Ref::channels']]]
+  ['transaction_0',['transaction',['../classMLVP_1_1RefPack_1_1Ref.html#a915882584b0cb9ac95f157174ebb0fe4',1,'MLVP::RefPack::Ref::transaction'],['../classMLVP_1_1Simulator_1_1Simulator.html#a9b15ca88d3ffdbe11bdd74b26c7f8070',1,'MLVP::Simulator::Simulator::transaction']]],
+  ['transactionitems_1',['transactionItems',['../classMLVP_1_1Transaction_1_1Transaction.html#a13ecc6813cfd797a5aa52469fa4fb039',1,'MLVP::Transaction::Transaction']]]
 ];

@@ -120,15 +120,21 @@ $(function(){initNavTree('simulator_8h.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">simulator.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">Library/types.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">Library/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="driverModel_8h_source.html">Drivers/driverModel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="channel_8h_source.html">Channel/channel.h</a>&quot;</code><br />
+<code>#include &quot;Transaction/transaction.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for simulator.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="simulator_8h__incl.svg" width="306" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="simulator_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -142,6 +148,12 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMLVP_1_1Simulator_1_1Simulator.html">MLVP::Simulator::Simulator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ad795b2f43f3629236058f5a8aa59c55f" id="r_ad795b2f43f3629236058f5a8aa59c55f"><td class="memItemLeft" align="right" valign="top"><a id="ad795b2f43f3629236058f5a8aa59c55f" name="ad795b2f43f3629236058f5a8aa59c55f"></a>
+typedef std::map&lt; std::pair&lt; std::string, std::string &gt;, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Channel_1_1Channel.html">MLVP::Channel::Channel</a>&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MLVP::Simulator::ChannelsType</b></td></tr>
+<tr class="separator:ad795b2f43f3629236058f5a8aa59c55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Gao Sion (<a href="#" onclick="location.href='mai'+'lto:'+'gao'+'si'+'on2'+'00'+'1@g'+'ma'+'il.'+'co'+'m'; return false;">gaosi<span class="obfuscator">.nosp@m.</span>on20<span class="obfuscator">.nosp@m.</span>01@gm<span class="obfuscator">.nosp@m.</span>ail.<span class="obfuscator">.nosp@m.</span>com</a>) </dd></dl>
