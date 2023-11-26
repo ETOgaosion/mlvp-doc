@@ -110,7 +110,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="classRefCacheDriver.html" target="_top" xlink:title="RefUnitDriver, use a ref class to simulate the dut logic.">
+<g id="a_Node000004"><a xlink:href="classRefCacheDriver.html" target="_top" xlink:title="RefUnitDriver, use a ref class cache simulate the dut logic.">
 <polygon fill="white" stroke="#666666" points="504.5,-167 411.5,-167 411.5,-148 504.5,-148 504.5,-167"/>
 <text text-anchor="middle" x="458" y="-155" font-family="Helvetica,sans-Serif" font-size="10.00">RefCacheDriver</text>
 </a>

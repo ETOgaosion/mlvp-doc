@@ -128,9 +128,9 @@ $(function(){initNavTree('classMLVP_1_1Driver_1_1Driver.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acdd5c245a763720a1555807ce8337699" id="r_acdd5c245a763720a1555807ce8337699"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdd5c245a763720a1555807ce8337699">Driver</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html">MLVP::Transaction::Transaction</a> &gt; &gt; inTransactions, std::unique_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; inDut, std::unique_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; inRef, int inSimulatorSetIndex, std::vector&lt; std::string &gt; inSimulatorNames)</td></tr>
-<tr class="memdesc:acdd5c245a763720a1555807ce8337699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classMLVP_1_1Driver_1_1Driver.html">Driver</a> object.  <br /></td></tr>
-<tr class="separator:acdd5c245a763720a1555807ce8337699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46dddc79074b9da6087bb515446e5e34" id="r_a46dddc79074b9da6087bb515446e5e34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46dddc79074b9da6087bb515446e5e34">Driver</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html">MLVP::Transaction::Transaction</a> &gt; &gt; inTransactions, std::unique_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; inDut, std::unique_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; inRef, std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt; inDutSimulatorDrivers, std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt; inRefSimulatorDrivers)</td></tr>
+<tr class="memdesc:a46dddc79074b9da6087bb515446e5e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classMLVP_1_1Driver_1_1Driver.html">Driver</a> object.  <br /></td></tr>
+<tr class="separator:a46dddc79074b9da6087bb515446e5e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a536d3d3156f923b04cb82ecbe1b70569" id="r_a536d3d3156f923b04cb82ecbe1b70569"><td class="memItemLeft" align="right" valign="top"><a id="a536d3d3156f923b04cb82ecbe1b70569" name="a536d3d3156f923b04cb82ecbe1b70569"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>sendTransaction</b> (bool toRef)</td></tr>
 <tr class="separator:a536d3d3156f923b04cb82ecbe1b70569"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,8 +142,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>driving</b> (const std
 <tr class="separator:ad00f575b9ee8441e9edbbdf9327afb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acdd5c245a763720a1555807ce8337699" name="acdd5c245a763720a1555807ce8337699"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdd5c245a763720a1555807ce8337699">&#9670;&#160;</a></span>Driver()</h2>
+<a id="a46dddc79074b9da6087bb515446e5e34" name="a46dddc79074b9da6087bb515446e5e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46dddc79074b9da6087bb515446e5e34">&#9670;&#160;</a></span>Driver()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,14 +172,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>driving</b> (const std
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inSimulatorSetIndex</em>, </td>
+          <td class="paramtype">std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>inDutSimulatorDrivers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
-          <td class="paramname"><em>inSimulatorNames</em>&#160;</td>
+          <td class="paramtype">std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>inRefSimulatorDrivers</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

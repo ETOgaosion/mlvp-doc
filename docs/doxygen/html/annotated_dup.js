@@ -38,7 +38,7 @@ var annotated_dup =
         [ "Simulator", "classMLVP_1_1Simulator_1_1Simulator.html", "classMLVP_1_1Simulator_1_1Simulator" ]
       ] ],
       [ "Spreader", null, [
-        [ "Spreader", "classMLVP_1_1Spreader_1_1Spreader.html", null ]
+        [ "Spreader", "classMLVP_1_1Spreader_1_1Spreader.html", "classMLVP_1_1Spreader_1_1Spreader" ]
       ] ],
       [ "TestGenerator", null, [
         [ "GeneratedUserTest", "classMLVP_1_1TestGenerator_1_1GeneratedUserTest.html", null ],

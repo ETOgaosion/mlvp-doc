@@ -30,5 +30,6 @@ var main_8cpp =
       [ "SEQ", "main_8cpp.html#a8c89468c7e4e1af3aa03a75a999cb682a5826d2990481dd71b3e258ddf8435676", null ],
       [ "ALL", "main_8cpp.html#a8c89468c7e4e1af3aa03a75a999cb682a5fb1f955b45e38e31789286a1790398d", null ]
     ] ],
-    [ "generateTest", "main_8cpp.html#a7c31b780ec0b7bd37ce6bfc897f70f64", null ]
+    [ "generateTest", "main_8cpp.html#a7c31b780ec0b7bd37ce6bfc897f70f64", null ],
+    [ "registerEvaluator", "main_8cpp.html#aeb1f431176254d0aa27c474e3a32fa04", null ]
 ];

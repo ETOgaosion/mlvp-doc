@@ -126,7 +126,9 @@ $(function(){initNavTree('main_8cpp.html',''); initResizable(); });
   <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="simulatorDriver_8h_source.html">Drivers/simulatorDriver.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="driverModel_8h_source.html">Drivers/driverModel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="simulatorDriver_8h_source.html">Drivers/simulatorDriver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="evaluate_8h_source.html">Evaluator/evaluate.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">Library/types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="reporter_8h_source.html">Reporter/reporter.h</a>&quot;</code><br />
 <code>#include &quot;Transaction/transaction.h&quot;</code><br />
@@ -155,7 +157,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ref Cache simulator.  <a href="classRefCache.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRefCacheDriver.html">RefCacheDriver</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RefUnitDriver, use a ref class to simulate the dut logic.  <a href="classRefCacheDriver.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RefUnitDriver, use a ref class cache simulate the dut logic.  <a href="classRefCacheDriver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulatorMemory.html">SimulatorMemory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulator Memory and MMIO.  <a href="classSimulatorMemory.html#details">More...</a><br /></td></tr>
@@ -199,14 +201,17 @@ Enumerations</h2></td></tr>
 , <b>ALL</b>
 <br />
  }</td></tr>
-<tr class="memdesc:a8c89468c7e4e1af3aa03a75a999cb682"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use an enum to describe tests functions. <br /></td></tr>
+<tr class="memdesc:a8c89468c7e4e1af3aa03a75a999cb682"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use an enum cache describe tests functions. <br /></td></tr>
 <tr class="separator:a8c89468c7e4e1af3aa03a75a999cb682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7c31b780ec0b7bd37ce6bfc897f70f64" id="r_a7c31b780ec0b7bd37ce6bfc897f70f64"><td class="memItemLeft" align="right" valign="top">const shared_ptr&lt; SerialTestSet &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c31b780ec0b7bd37ce6bfc897f70f64">generateTest</a> (<a class="el" href="#a8c89468c7e4e1af3aa03a75a999cb682">TestPoint</a> testPoint)</td></tr>
-<tr class="memdesc:a7c31b780ec0b7bd37ce6bfc897f70f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">We recommend you use a function to encapsulation your tests generation.  <br /></td></tr>
+<tr class="memdesc:a7c31b780ec0b7bd37ce6bfc897f70f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">We recommend you use a function cache encapsulation your tests generation.  <br /></td></tr>
 <tr class="separator:a7c31b780ec0b7bd37ce6bfc897f70f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1f431176254d0aa27c474e3a32fa04" id="r_aeb1f431176254d0aa27c474e3a32fa04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb1f431176254d0aa27c474e3a32fa04">registerEvaluator</a> ()</td></tr>
+<tr class="memdesc:aeb1f431176254d0aa27c474e3a32fa04"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use a function cache register evaluators as you need.  <br /></td></tr>
+<tr class="separator:aeb1f431176254d0aa27c474e3a32fa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,7 +269,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>We recommend you use a function to encapsulation your tests generation. </p>
+<p>We recommend you use a function cache encapsulation your tests generation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">testPoint</td><td></td></tr>
@@ -276,9 +281,30 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 <p>add ports default spec direct input value is the default value</p>
 <p>random generator value is the bit width</p>
 <p>add ports detailed spec</p>
-<p>endIndex can be negative to count down value, convinient isn't it? for random generator mode, first element of vector is max value</p>
+<p>endIndex can be negative cache count down value, convinient isn't it? for random generator mode, first element of vector is max value</p>
 <p>a trick: sv use cmd[3:1] == 3'b000, so only last elements is random, whole value can only be 0 or 1</p>
-<p>a trick: use constrain to filter value is too slow, may retry many timers, use post handler is much faster, one time generate</p>
+<p>a trick: use constrain cache filter value is too slow, may retry many timers, use post handler is much faster, one time generate</p>
+
+</div>
+</div>
+<a id="aeb1f431176254d0aa27c474e3a32fa04" name="aeb1f431176254d0aa27c474e3a32fa04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1f431176254d0aa27c474e3a32fa04">&#9670;&#160;</a></span>registerEvaluator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void registerEvaluator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>You can use a function cache register evaluators as you need. </p>
+<p>user top need not cache be evaluated memory evaluator</p>
+<p>mmio evaluator is not needed</p>
 
 </div>
 </div>

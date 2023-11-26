@@ -128,13 +128,72 @@ $(function(){initNavTree('classMLVP_1_1Spreader_1_1Spreader.html',''); initResiz
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae6e91cf6f901be1ca1b4ff8e050aba7b" id="r_ae6e91cf6f901be1ca1b4ff8e050aba7b"><td class="memItemLeft" align="right" valign="top"><a id="ae6e91cf6f901be1ca1b4ff8e050aba7b" name="ae6e91cf6f901be1ca1b4ff8e050aba7b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Spreader</b> (std::string inLogPath, std::string inReportPath, std::vector&lt; std::string &gt; inSimulatorNames)</td></tr>
-<tr class="separator:ae6e91cf6f901be1ca1b4ff8e050aba7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c05a3cca8f78bac2cfcd54bf380be10" id="r_a6c05a3cca8f78bac2cfcd54bf380be10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c05a3cca8f78bac2cfcd54bf380be10">Spreader</a> (std::string inLogPath, std::string inReportPath, std::vector&lt; std::pair&lt; std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a> &gt; &gt;, std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a> &gt; &gt; &gt; &gt; inSimulatorDrivers)</td></tr>
+<tr class="memdesc:a6c05a3cca8f78bac2cfcd54bf380be10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classMLVP_1_1Spreader_1_1Spreader.html">Spreader</a> object.  <br /></td></tr>
+<tr class="separator:a6c05a3cca8f78bac2cfcd54bf380be10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17d6ff72dffc8cf70748b9cc5b11ae47" id="r_a17d6ff72dffc8cf70748b9cc5b11ae47"><td class="memItemLeft" align="right" valign="top"><a id="a17d6ff72dffc8cf70748b9cc5b11ae47" name="a17d6ff72dffc8cf70748b9cc5b11ae47"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> ()</td></tr>
 <tr class="separator:a17d6ff72dffc8cf70748b9cc5b11ae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6c05a3cca8f78bac2cfcd54bf380be10" name="a6c05a3cca8f78bac2cfcd54bf380be10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c05a3cca8f78bac2cfcd54bf380be10">&#9670;&#160;</a></span>Spreader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TDut , class TRef , class TReport &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMLVP_1_1Spreader_1_1Spreader.html">MLVP::Spreader::Spreader</a>&lt; TDut, TRef, TReport &gt;::Spreader </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>inLogPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>inReportPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a> &gt; &gt;, std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a> &gt; &gt; &gt; &gt;&#160;</td>
+          <td class="paramname"><em>inSimulatorDrivers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classMLVP_1_1Spreader_1_1Spreader.html">Spreader</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inLogPath</td><td></td></tr>
+    <tr><td class="paramname">inReportPath</td><td></td></tr>
+    <tr><td class="paramname">inSimulatorDrivers</td><td>this is a complex data structure, consider example below:</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  &lt;{{<span class="stringliteral">&quot;memoryDut&quot;</span>: dutMemoryDriver1}, {<span class="stringliteral">&quot;mmioDut&quot;</span>: dutMmioDriver1}}, {{<span class="stringliteral">&quot;memoryRef&quot;</span>: refMemoryDriver1}, {<span class="stringliteral">&quot;mmioRef&quot;</span>: refMmioDriver1}}&gt;,</div>
+<div class="line">  ....</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/Spreader/<a class="el" href="spreader_8h_source.html">spreader.h</a></li>
 </ul>
