@@ -142,9 +142,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TransDriver</b> ()=delete</td></tr>
 <tr class="memdesc:ab47709f3fe05f20306bd3436447ace0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually a <a class="el" href="classMLVP_1_1Driver_1_1SimulatorDriver.html">SimulatorDriver</a> Child Implemented by user. <br /></td></tr>
 <tr class="separator:ab47709f3fe05f20306bd3436447ace0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c891b913e4aae263f0903a0da16679f" id="r_a6c891b913e4aae263f0903a0da16679f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c891b913e4aae263f0903a0da16679f">TransDriver</a> (bool inIsRef, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; in, std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt; inSimulatorDrivers)</td></tr>
-<tr class="memdesc:a6c891b913e4aae263f0903a0da16679f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Trans <a class="el" href="classMLVP_1_1Driver_1_1Driver.html">Driver</a> object.  <br /></td></tr>
-<tr class="separator:a6c891b913e4aae263f0903a0da16679f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77632a73e82a6bb3ce1fa5934e406386" id="r_a77632a73e82a6bb3ce1fa5934e406386"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77632a73e82a6bb3ce1fa5934e406386">TransDriver</a> (int inResetCycles, bool inIsRef, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; in, std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt; inSimulatorDrivers)</td></tr>
+<tr class="memdesc:a77632a73e82a6bb3ce1fa5934e406386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Trans <a class="el" href="classMLVP_1_1Driver_1_1Driver.html">Driver</a> object.  <br /></td></tr>
+<tr class="separator:a77632a73e82a6bb3ce1fa5934e406386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56f081ddae66d5407fffa1cc02476cd9" id="r_a56f081ddae66d5407fffa1cc02476cd9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56f081ddae66d5407fffa1cc02476cd9">getName</a> () override</td></tr>
 <tr class="separator:a56f081ddae66d5407fffa1cc02476cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3314b9c1fbef044512791d5f729d54b0" id="r_a3314b9c1fbef044512791d5f729d54b0"><td class="memItemLeft" align="right" valign="top"><a id="a3314b9c1fbef044512791d5f729d54b0" name="a3314b9c1fbef044512791d5f729d54b0"></a>
@@ -161,6 +161,8 @@ std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Channel_1_1Channel.html">ML
 <tr class="separator:ad66983df7d97b98124cd7fda0d831f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a143aa54a0105c1249354cb21acf9216e" id="r_a143aa54a0105c1249354cb21acf9216e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a143aa54a0105c1249354cb21acf9216e">setTransaction</a> (std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html">MLVP::Transaction::Transaction</a> &gt; inTransaction) override</td></tr>
 <tr class="separator:a143aa54a0105c1249354cb21acf9216e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ae92a0adb14eeab68004029fdd195b" id="r_a72ae92a0adb14eeab68004029fdd195b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72ae92a0adb14eeab68004029fdd195b">reset</a> () override</td></tr>
+<tr class="separator:a72ae92a0adb14eeab68004029fdd195b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7048ba2070b459d3911d3e0acc3235f6" id="r_a7048ba2070b459d3911d3e0acc3235f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7048ba2070b459d3911d3e0acc3235f6">drivingStep</a> (bool isLast) override</td></tr>
 <tr class="separator:a7048ba2070b459d3911d3e0acc3235f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ad6325369a47a754509d8d407a4f32c" id="r_a7ad6325369a47a754509d8d407a4f32c"><td class="memItemLeft" align="right" valign="top"><a id="a7ad6325369a47a754509d8d407a4f32c" name="a7ad6325369a47a754509d8d407a4f32c"></a>
@@ -171,9 +173,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>transactionFinish</b>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> ()=default</td></tr>
 <tr class="memdesc:a681253def873fa8cda57f5cb560b171c inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;dest name, Channel&lt;DriverModel&gt;&gt; <br /></td></tr>
 <tr class="separator:a681253def873fa8cda57f5cb560b171c inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf3ac89f0e13ce7446badd154bde0c65 inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel" id="r_acf3ac89f0e13ce7446badd154bde0c65"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> (bool inIsRef, std::string inName)</td></tr>
-<tr class="separator:acf3ac89f0e13ce7446badd154bde0c65 inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86eab77c3cbcbd3e5cea3f5762108b3 inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel" id="r_ab86eab77c3cbcbd3e5cea3f5762108b3"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> (int inResetCycles, bool inIsRef, std::string inName)</td></tr>
+<tr class="separator:ab86eab77c3cbcbd3e5cea3f5762108b3 inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029736212435b32834752edfcdf7d92c inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel" id="r_a029736212435b32834752edfcdf7d92c"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkTransactionFinish</b> ()</td></tr>
 <tr class="separator:a029736212435b32834752edfcdf7d92c inherit pub_methods_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +192,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRef</b> = false</td
 <tr class="memitem:a843e5dce5e4b8b606b6add8cbb3d9b67 inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel" id="r_a843e5dce5e4b8b606b6add8cbb3d9b67"><td class="memItemLeft" align="right" valign="top">
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a843e5dce5e4b8b606b6add8cbb3d9b67 inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae294aa5a0ffefeb8d011fcdd2bda57fc inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel" id="r_ae294aa5a0ffefeb8d011fcdd2bda57fc"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>resetCycles</b> = 0</td></tr>
+<tr class="separator:ae294aa5a0ffefeb8d011fcdd2bda57fc inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeff84849b6a85e9e08b0785b785971a inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel" id="r_aaeff84849b6a85e9e08b0785b785971a"><td class="memItemLeft" align="right" valign="top">
 std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html">MLVP::Transaction::Transaction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>transaction</b></td></tr>
 <tr class="separator:aaeff84849b6a85e9e08b0785b785971a inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,8 +203,8 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
 <tr class="separator:ac1800a67969219babea8a57d18d7f9ab inherit pro_attribs_classMLVP_1_1Driver_1_1DriverModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6c891b913e4aae263f0903a0da16679f" name="a6c891b913e4aae263f0903a0da16679f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c891b913e4aae263f0903a0da16679f">&#9670;&#160;</a></span>TransDriver()</h2>
+<a id="a77632a73e82a6bb3ce1fa5934e406386" name="a77632a73e82a6bb3ce1fa5934e406386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77632a73e82a6bb3ce1fa5934e406386">&#9670;&#160;</a></span>TransDriver()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,6 +215,12 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
         <tr>
           <td class="memname">MLVP::Driver::TransDriver::TransDriver </td>
           <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inResetCycles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>inIsRef</em>, </td>
         </tr>
@@ -456,6 +467,33 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a>.</p>
+
+</div>
+</div>
+<a id="a72ae92a0adb14eeab68004029fdd195b" name="a72ae92a0adb14eeab68004029fdd195b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ae92a0adb14eeab68004029fdd195b">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MLVP::Driver::TransDriver::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a>.</p>
 
 </div>
 </div>

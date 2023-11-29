@@ -13,5 +13,6 @@ var searchData=
   ['registerevaluator_10',['registerEvaluator',['../main_8cpp.html#aeb1f431176254d0aa27c474e3a32fa04',1,'main.cpp']]],
   ['reporter_11',['Reporter',['../classMLVP_1_1Reporter_1_1Reporter.html',1,'MLVP::Reporter']]],
   ['reporter_2ecpp_12',['reporter.cpp',['../reporter_8cpp.html',1,'']]],
-  ['reporter_2eh_13',['reporter.h',['../reporter_8h.html',1,'']]]
+  ['reporter_2eh_13',['reporter.h',['../reporter_8h.html',1,'']]],
+  ['reset_14',['reset',['../classDutCacheDriver.html#acf407d3600ff3a4de768aedae6afd5d1',1,'DutCacheDriver']]]
 ];

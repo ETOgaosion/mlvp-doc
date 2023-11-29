@@ -138,9 +138,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> ()=default</td></tr>
 <tr class="memdesc:a681253def873fa8cda57f5cb560b171c"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;dest name, Channel&lt;DriverModel&gt;&gt; <br /></td></tr>
 <tr class="separator:a681253def873fa8cda57f5cb560b171c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf3ac89f0e13ce7446badd154bde0c65" id="r_acf3ac89f0e13ce7446badd154bde0c65"><td class="memItemLeft" align="right" valign="top"><a id="acf3ac89f0e13ce7446badd154bde0c65" name="acf3ac89f0e13ce7446badd154bde0c65"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> (bool inIsRef, std::string inName)</td></tr>
-<tr class="separator:acf3ac89f0e13ce7446badd154bde0c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86eab77c3cbcbd3e5cea3f5762108b3" id="r_ab86eab77c3cbcbd3e5cea3f5762108b3"><td class="memItemLeft" align="right" valign="top"><a id="ab86eab77c3cbcbd3e5cea3f5762108b3" name="ab86eab77c3cbcbd3e5cea3f5762108b3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DriverModel</b> (int inResetCycles, bool inIsRef, std::string inName)</td></tr>
+<tr class="separator:ab86eab77c3cbcbd3e5cea3f5762108b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dd529991b41131c52d8dd49363eb85e" id="r_a5dd529991b41131c52d8dd49363eb85e"><td class="memItemLeft" align="right" valign="top"><a id="a5dd529991b41131c52d8dd49363eb85e" name="a5dd529991b41131c52d8dd49363eb85e"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
 <tr class="separator:a5dd529991b41131c52d8dd49363eb85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +162,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>addChannel</b
 <tr class="memitem:a88d5a51bc6aaa8dda3ed478ef53f5e89" id="r_a88d5a51bc6aaa8dda3ed478ef53f5e89"><td class="memItemLeft" align="right" valign="top"><a id="a88d5a51bc6aaa8dda3ed478ef53f5e89" name="a88d5a51bc6aaa8dda3ed478ef53f5e89"></a>
 virtual std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Channel_1_1Channel.html">MLVP::Channel::Channel</a>&lt; <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">DriverModel</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getChannel</b> (bool inFromRef, const std::string &amp;inSourceName, const std::string &amp;inDestName, bool &amp;result)</td></tr>
 <tr class="separator:a88d5a51bc6aaa8dda3ed478ef53f5e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db72f3ff77e105924b60160afa7b6fb" id="r_a6db72f3ff77e105924b60160afa7b6fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6db72f3ff77e105924b60160afa7b6fb">reset</a> ()=0</td></tr>
+<tr class="separator:a6db72f3ff77e105924b60160afa7b6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a001653cdf49455a0eb66c13bb290fb62" id="r_a001653cdf49455a0eb66c13bb290fb62"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001653cdf49455a0eb66c13bb290fb62">drivingStep</a> (bool isLast)=0</td></tr>
 <tr class="separator:a001653cdf49455a0eb66c13bb290fb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -173,6 +175,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRef</b> = false</td
 <tr class="memitem:a843e5dce5e4b8b606b6add8cbb3d9b67" id="r_a843e5dce5e4b8b606b6add8cbb3d9b67"><td class="memItemLeft" align="right" valign="top"><a id="a843e5dce5e4b8b606b6add8cbb3d9b67" name="a843e5dce5e4b8b606b6add8cbb3d9b67"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a843e5dce5e4b8b606b6add8cbb3d9b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae294aa5a0ffefeb8d011fcdd2bda57fc" id="r_ae294aa5a0ffefeb8d011fcdd2bda57fc"><td class="memItemLeft" align="right" valign="top"><a id="ae294aa5a0ffefeb8d011fcdd2bda57fc" name="ae294aa5a0ffefeb8d011fcdd2bda57fc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>resetCycles</b> = 0</td></tr>
+<tr class="separator:ae294aa5a0ffefeb8d011fcdd2bda57fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeff84849b6a85e9e08b0785b785971a" id="r_aaeff84849b6a85e9e08b0785b785971a"><td class="memItemLeft" align="right" valign="top"><a id="aaeff84849b6a85e9e08b0785b785971a" name="aaeff84849b6a85e9e08b0785b785971a"></a>
 std::shared_ptr&lt; <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html">MLVP::Transaction::Transaction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>transaction</b></td></tr>
 <tr class="separator:aaeff84849b6a85e9e08b0785b785971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,6 +211,33 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classDutCacheDriver.html#ae5a15e6629b1007bda67f887085fa703">DutCacheDriver</a>, and <a class="el" href="classRefCacheDriver.html#aaada59a7336089937d2113f5c056a9f2">RefCacheDriver</a>.</p>
+
+</div>
+</div>
+<a id="a6db72f3ff77e105924b60160afa7b6fb" name="a6db72f3ff77e105924b60160afa7b6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db72f3ff77e105924b60160afa7b6fb">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MLVP::Driver::DriverModel::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classDutCacheDriver.html#acf407d3600ff3a4de768aedae6afd5d1">DutCacheDriver</a>.</p>
 
 </div>
 </div>
