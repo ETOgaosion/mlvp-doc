@@ -144,7 +144,7 @@ $(function(){initNavTree('simulatorDriver_8h_source.html',''); initResizable(); 
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classMLVP_1_1Driver_1_1SimulatorDriver.html">SimulatorDriver</a>() = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="classMLVP_1_1Driver_1_1SimulatorDriver.html">~SimulatorDriver</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="classMLVP_1_1Driver_1_1SimulatorDriver.html">SimulatorDriver</a>(std::string inSimulatorName, std::shared_ptr&lt;MLVP::Simulator::Simulator&gt; inSimulator) : <a class="code hl_function" href="classMLVP_1_1Driver_1_1DriverModel.html#a681253def873fa8cda57f5cb560b171c">DriverModel</a>(std::move(inSimulatorName)), simulator(std::move(inSimulator)) {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="classMLVP_1_1Driver_1_1SimulatorDriver.html">SimulatorDriver</a>(<span class="keywordtype">bool</span> isRef, std::string inSimulatorName, std::shared_ptr&lt;MLVP::Simulator::Simulator&gt; inSimulator) : <a class="code hl_function" href="classMLVP_1_1Driver_1_1DriverModel.html#a681253def873fa8cda57f5cb560b171c">DriverModel</a>(isRef, std::move(inSimulatorName)), simulator(std::move(inSimulator)) {}</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}; <span class="comment">// class SimulatorDriver</span></div>
 </div>
@@ -166,7 +166,7 @@ $(function(){initNavTree('simulatorDriver_8h_source.html',''); initResizable(); 
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">int</span> registerSimulatorDriver(<span class="keyword">const</span> std::vector&lt;std::pair&lt;std::shared_ptr&lt;SimulatorDriver&gt;, std::shared_ptr&lt;SimulatorDriver&gt;&gt;&gt; &amp;inDriverModels) {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        driverModels.emplace_back();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;driver : inDriverModels) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            driverModels.back()[driver.first-&gt;getName()] = driver;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            driverModels.back().emplace(driver.first-&gt;getName(), driver);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)driverModels.size() - 1;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
@@ -188,7 +188,7 @@ $(function(){initNavTree('simulatorDriver_8h_source.html',''); initResizable(); 
 </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>} <span class="comment">// namespace MLVP::Driver</span></div>
-<div class="ttc" id="aclassMLVP_1_1Driver_1_1DriverModel_html"><div class="ttname"><a href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a></div><div class="ttdef"><b>Definition</b> driverModel.h:27</div></div>
+<div class="ttc" id="aclassMLVP_1_1Driver_1_1DriverModel_html"><div class="ttname"><a href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a></div><div class="ttdef"><b>Definition</b> driverModel.h:28</div></div>
 <div class="ttc" id="aclassMLVP_1_1Driver_1_1DriverModel_html_a681253def873fa8cda57f5cb560b171c"><div class="ttname"><a href="classMLVP_1_1Driver_1_1DriverModel.html#a681253def873fa8cda57f5cb560b171c">MLVP::Driver::DriverModel::DriverModel</a></div><div class="ttdeci">DriverModel()=default</div><div class="ttdoc">&lt;dest name, Channel&lt;DriverModel&gt;&gt;</div></div>
 <div class="ttc" id="aclassMLVP_1_1Driver_1_1SimulatorDriver_html"><div class="ttname"><a href="classMLVP_1_1Driver_1_1SimulatorDriver.html">MLVP::Driver::SimulatorDriver</a></div><div class="ttdef"><b>Definition</b> simulatorDriver.h:20</div></div>
 <div class="ttc" id="aclassMLVP_1_1Driver_1_1SimulatorlDriverRegistrar_html"><div class="ttname"><a href="classMLVP_1_1Driver_1_1SimulatorlDriverRegistrar.html">MLVP::Driver::SimulatorlDriverRegistrar</a></div><div class="ttdef"><b>Definition</b> simulatorDriver.h:41</div></div>

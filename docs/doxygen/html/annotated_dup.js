@@ -58,8 +58,7 @@ var annotated_dup =
     [ "DutCacheDriver", "classDutCacheDriver.html", "classDutCacheDriver" ],
     [ "MemorySimulatorDriver", "classMemorySimulatorDriver.html", null ],
     [ "MMIOSimulatorDriver", "classMMIOSimulatorDriver.html", null ],
-    [ "RefCache", "classRefCache.html", "classRefCache" ],
-    [ "RefCacheDriver", "classRefCacheDriver.html", null ],
+    [ "RefCacheDriver", "classRefCacheDriver.html", "classRefCacheDriver" ],
     [ "SimulatorMemory", "classSimulatorMemory.html", "classSimulatorMemory" ],
     [ "SimulatorMMIO", "classSimulatorMMIO.html", "classSimulatorMMIO" ]
 ];

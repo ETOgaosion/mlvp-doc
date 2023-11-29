@@ -9,7 +9,7 @@ var searchData=
   ['simulatordriver_2ecpp_6',['simulatorDriver.cpp',['../simulatorDriver_8cpp.html',1,'']]],
   ['simulatordriver_2eh_7',['simulatorDriver.h',['../simulatorDriver_8h.html',1,'']]],
   ['simulatorldriverregistrar_8',['SimulatorlDriverRegistrar',['../classMLVP_1_1Driver_1_1SimulatorlDriverRegistrar.html',1,'MLVP::Driver']]],
-  ['simulatormemory_9',['SimulatorMemory',['../classSimulatorMemory.html',1,'']]],
+  ['simulatormemory_9',['simulatormemory',['../classSimulatorMemory.html',1,'SimulatorMemory'],['../classSimulatorMemory.html#a5cd3371494e446eff9fed9153506c2f0',1,'SimulatorMemory::SimulatorMemory()']]],
   ['simulatormmio_10',['SimulatorMMIO',['../classSimulatorMMIO.html',1,'']]],
   ['spreader_11',['spreader',['../classMLVP_1_1Spreader_1_1Spreader.html',1,'MLVP::Spreader::Spreader&lt; TDut, TRef, TReport &gt;'],['../classMLVP_1_1Spreader_1_1Spreader.html#a6c05a3cca8f78bac2cfcd54bf380be10',1,'MLVP::Spreader::Spreader::Spreader()']]],
   ['spreader_2ecpp_12',['spreader.cpp',['../spreader_8cpp.html',1,'']]],

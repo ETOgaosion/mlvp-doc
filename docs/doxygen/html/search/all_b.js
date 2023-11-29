@@ -10,7 +10,7 @@ var searchData=
   ['transactionreq_7',['TransactionReq',['../classMLVP_1_1Transaction_1_1TransactionReq.html',1,'MLVP::Transaction']]],
   ['transactionresp_8',['TransactionResp',['../structMLVP_1_1Transaction_1_1TransactionResp.html',1,'MLVP::Transaction']]],
   ['transactiontop_9',['TransactionTop',['../classMLVP_1_1Transaction_1_1TransactionTop.html',1,'MLVP::Transaction']]],
-  ['transdriver_10',['transdriver',['../classMLVP_1_1Driver_1_1TransDriver.html',1,'MLVP::Driver::TransDriver'],['../classMLVP_1_1Driver_1_1TransDriver.html#ab47709f3fe05f20306bd3436447ace0e',1,'MLVP::Driver::TransDriver::TransDriver()=delete'],['../classMLVP_1_1Driver_1_1TransDriver.html#a4a0b90ea432204f950213a1441a2f524',1,'MLVP::Driver::TransDriver::TransDriver(std::unique_ptr&lt; DriverModel &gt; in, std::unordered_map&lt; std::string, std::shared_ptr&lt; DriverModel &gt; &gt; inSimulatorDrivers)']]],
+  ['transdriver_10',['transdriver',['../classMLVP_1_1Driver_1_1TransDriver.html',1,'MLVP::Driver::TransDriver'],['../classMLVP_1_1Driver_1_1TransDriver.html#ab47709f3fe05f20306bd3436447ace0e',1,'MLVP::Driver::TransDriver::TransDriver()=delete'],['../classMLVP_1_1Driver_1_1TransDriver.html#a6c891b913e4aae263f0903a0da16679f',1,'MLVP::Driver::TransDriver::TransDriver(bool inIsRef, std::shared_ptr&lt; DriverModel &gt; in, std::unordered_map&lt; std::string, std::shared_ptr&lt; DriverModel &gt; &gt; inSimulatorDrivers)']]],
   ['transdrivermodel_2ecpp_11',['transDriverModel.cpp',['../transDriverModel_8cpp.html',1,'']]],
   ['transdrivermodel_2eh_12',['transDriverModel.h',['../transDriverModel_8h.html',1,'']]],
   ['types_2eh_13',['types.h',['../types_8h.html',1,'']]]

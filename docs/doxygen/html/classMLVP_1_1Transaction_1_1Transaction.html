@@ -176,9 +176,9 @@ const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a5990cc88bcd3a1c247bbf54f18fcc6dd" id="r_a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5990cc88bcd3a1c247bbf54f18fcc6dd">addResponse</a> (<a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;req, MLVP::Type::PortsData outSignal, bool fromRef, bool burst)</td></tr>
 <tr class="memdesc:a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">add response to a request  <br /></td></tr>
 <tr class="separator:a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2137c48d942e2bf5f532d6865c2c114b" id="r_a2137c48d942e2bf5f532d6865c2c114b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2137c48d942e2bf5f532d6865c2c114b">checkRequest</a> (const std::string &amp;src, const std::string &amp;dest, bool fromRef, bool &amp;totalNumber)</td></tr>
-<tr class="memdesc:a2137c48d942e2bf5f532d6865c2c114b"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether there is a request from src to dest  <br /></td></tr>
-<tr class="separator:a2137c48d942e2bf5f532d6865c2c114b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388d902eb9b1d372d0c8b4c1ee8139b1" id="r_a388d902eb9b1d372d0c8b4c1ee8139b1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a388d902eb9b1d372d0c8b4c1ee8139b1">checkRequest</a> (const std::string &amp;src, const std::string &amp;dest, bool fromRef)</td></tr>
+<tr class="memdesc:a388d902eb9b1d372d0c8b4c1ee8139b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether there is a request from src to dest  <br /></td></tr>
+<tr class="separator:a388d902eb9b1d372d0c8b4c1ee8139b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaff37d6705507595f20aef84c68bd40d" id="r_aaff37d6705507595f20aef84c68bd40d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaff37d6705507595f20aef84c68bd40d">getRequest</a> (const std::string &amp;src, const std::string &amp;dest, int reqId, bool fromRef)</td></tr>
 <tr class="memdesc:aaff37d6705507595f20aef84c68bd40d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Request object.  <br /></td></tr>
 <tr class="separator:aaff37d6705507595f20aef84c68bd40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +194,9 @@ const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:adcb506d4b23d0d0383092fba2365a9c5" id="r_adcb506d4b23d0d0383092fba2365a9c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcb506d4b23d0d0383092fba2365a9c5">checkTransactionFinish</a> ()</td></tr>
 <tr class="memdesc:adcb506d4b23d0d0383092fba2365a9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the dut and ref transaction finished  <br /></td></tr>
 <tr class="separator:adcb506d4b23d0d0383092fba2365a9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c31a97fc198262a8c58abd4c0992f4" id="r_a09c31a97fc198262a8c58abd4c0992f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09c31a97fc198262a8c58abd4c0992f4">checkTransactionFinish</a> (bool isRef)</td></tr>
+<tr class="memdesc:a09c31a97fc198262a8c58abd4c0992f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the dut or ref transaction finished  <br /></td></tr>
+<tr class="separator:a09c31a97fc198262a8c58abd4c0992f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875dacb2bad3e3b40d1406e41ba56209" id="r_a875dacb2bad3e3b40d1406e41ba56209"><td class="memItemLeft" align="right" valign="top"><a id="a875dacb2bad3e3b40d1406e41ba56209" name="a875dacb2bad3e3b40d1406e41ba56209"></a>
 std::vector&lt; std::reference_wrapper&lt; <a class="el" href="structMLVP_1_1Transaction_1_1TransactionResp.html">TransactionResp</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAllTransactionResp</b> (bool fromRef)</td></tr>
 <tr class="separator:a875dacb2bad3e3b40d1406e41ba56209"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -377,14 +380,14 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
 
 </div>
 </div>
-<a id="a2137c48d942e2bf5f532d6865c2c114b" name="a2137c48d942e2bf5f532d6865c2c114b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2137c48d942e2bf5f532d6865c2c114b">&#9670;&#160;</a></span>checkRequest()</h2>
+<a id="a388d902eb9b1d372d0c8b4c1ee8139b1" name="a388d902eb9b1d372d0c8b4c1ee8139b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388d902eb9b1d372d0c8b4c1ee8139b1">&#9670;&#160;</a></span>checkRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; MLVP::Transaction::Transaction::checkRequest </td>
+          <td class="memname">std::vector&lt; int &gt; Transaction::checkRequest </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>src</em>, </td>
@@ -399,13 +402,7 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>fromRef</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname"><em>totalNumber</em>&#160;</td>
+          <td class="paramname"><em>fromRef</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -421,7 +418,6 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
     <tr><td class="paramname">src</td><td>request src </td></tr>
     <tr><td class="paramname">dest</td><td>request dest </td></tr>
     <tr><td class="paramname">fromRef</td><td>dut or ref </td></tr>
-    <tr><td class="paramname">totalNumber</td><td>max transaction numbers waiting for response </td></tr>
   </table>
   </dd>
 </dl>
@@ -547,7 +543,7 @@ false </dd></dl>
 </div>
 </div>
 <a id="adcb506d4b23d0d0383092fba2365a9c5" name="adcb506d4b23d0d0383092fba2365a9c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcb506d4b23d0d0383092fba2365a9c5">&#9670;&#160;</a></span>checkTransactionFinish()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb506d4b23d0d0383092fba2365a9c5">&#9670;&#160;</a></span>checkTransactionFinish() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,6 +558,35 @@ false </dd></dl>
 </div><div class="memdoc">
 
 <p>check the dut and ref transaction finished </p>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a09c31a97fc198262a8c58abd4c0992f4" name="a09c31a97fc198262a8c58abd4c0992f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c31a97fc198262a8c58abd4c0992f4">&#9670;&#160;</a></span>checkTransactionFinish() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Transaction::checkTransactionFinish </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isRef</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check the dut or ref transaction finished </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isRef</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>

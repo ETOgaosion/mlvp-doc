@@ -25,9 +25,7 @@ var hierarchy =
     [ "MLVP::TestGenerator::PortTestSpec", "structMLVP_1_1TestGenerator_1_1PortTestSpec.html", null ],
     [ "MLVP::TestGenerator::PortTestSpecDefault", "structMLVP_1_1TestGenerator_1_1PortTestSpecDefault.html", null ],
     [ "MLVP::Library::RandomGenerator", "classMLVP_1_1Library_1_1RandomGenerator.html", null ],
-    [ "MLVP::RefPack::Ref", "classMLVP_1_1RefPack_1_1Ref.html", [
-      [ "RefCache", "classRefCache.html", null ]
-    ] ],
+    [ "MLVP::RefPack::Ref", "classMLVP_1_1RefPack_1_1Ref.html", null ],
     [ "MLVP::Reporter::Reporter", "classMLVP_1_1Reporter_1_1Reporter.html", [
       [ "MLVP::Reporter::VerilatorReporter", "classMLVP_1_1Reporter_1_1VerilatorReporter.html", null ]
     ] ],
