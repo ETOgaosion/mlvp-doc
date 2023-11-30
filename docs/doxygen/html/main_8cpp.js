@@ -4,8 +4,8 @@ var main_8cpp =
     [ "RefCacheDriver", "classRefCacheDriver.html", "classRefCacheDriver" ],
     [ "SimulatorMemory", "classSimulatorMemory.html", "classSimulatorMemory" ],
     [ "SimulatorMMIO", "classSimulatorMMIO.html", "classSimulatorMMIO" ],
-    [ "MemorySimulatorDriver", "classMemorySimulatorDriver.html", null ],
-    [ "MMIOSimulatorDriver", "classMMIOSimulatorDriver.html", null ],
+    [ "MemorySimulatorDriver", "classMemorySimulatorDriver.html", "classMemorySimulatorDriver" ],
+    [ "MMIOSimulatorDriver", "classMMIOSimulatorDriver.html", "classMMIOSimulatorDriver" ],
     [ "SimpleBusCmd", "main_8cpp.html#a34a78e2c3b9f389d18b63db5a79c6180", [
       [ "read", "main_8cpp.html#a34a78e2c3b9f389d18b63db5a79c6180aecae13117d6f0584c25a9da6c8f8415e", null ],
       [ "write", "main_8cpp.html#a34a78e2c3b9f389d18b63db5a79c6180aefb2a684e4afb7d55e6147fbe5a332ee", null ],

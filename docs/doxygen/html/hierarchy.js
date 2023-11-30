@@ -21,6 +21,8 @@ var hierarchy =
     ] ],
     [ "MLVP::Evaluator::Evaluator", "classMLVP_1_1Evaluator_1_1Evaluator.html", null ],
     [ "MLVP::TestGenerator::GeneratedUserTest", "classMLVP_1_1TestGenerator_1_1GeneratedUserTest.html", null ],
+    [ "MLVP::Library::GlobalMachineTimer", "classMLVP_1_1Library_1_1GlobalMachineTimer.html", null ],
+    [ "MLVP::Library::GlobalUserTimer", "classMLVP_1_1Library_1_1GlobalUserTimer.html", null ],
     [ "MLVP::TestGenerator::PortSpecGeneratorModel", "classMLVP_1_1TestGenerator_1_1PortSpecGeneratorModel.html", null ],
     [ "MLVP::TestGenerator::PortTestSpec", "structMLVP_1_1TestGenerator_1_1PortTestSpec.html", null ],
     [ "MLVP::TestGenerator::PortTestSpecDefault", "structMLVP_1_1TestGenerator_1_1PortTestSpecDefault.html", null ],

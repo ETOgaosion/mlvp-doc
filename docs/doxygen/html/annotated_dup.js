@@ -25,6 +25,8 @@ var annotated_dup =
         [ "Evaluator", "classMLVP_1_1Evaluator_1_1Evaluator.html", null ]
       ] ],
       [ "Library", null, [
+        [ "GlobalMachineTimer", "classMLVP_1_1Library_1_1GlobalMachineTimer.html", "classMLVP_1_1Library_1_1GlobalMachineTimer" ],
+        [ "GlobalUserTimer", "classMLVP_1_1Library_1_1GlobalUserTimer.html", null ],
         [ "RandomGenerator", "classMLVP_1_1Library_1_1RandomGenerator.html", "classMLVP_1_1Library_1_1RandomGenerator" ]
       ] ],
       [ "RefPack", null, [
@@ -56,8 +58,8 @@ var annotated_dup =
       ] ]
     ] ],
     [ "DutCacheDriver", "classDutCacheDriver.html", "classDutCacheDriver" ],
-    [ "MemorySimulatorDriver", "classMemorySimulatorDriver.html", null ],
-    [ "MMIOSimulatorDriver", "classMMIOSimulatorDriver.html", null ],
+    [ "MemorySimulatorDriver", "classMemorySimulatorDriver.html", "classMemorySimulatorDriver" ],
+    [ "MMIOSimulatorDriver", "classMMIOSimulatorDriver.html", "classMMIOSimulatorDriver" ],
     [ "RefCacheDriver", "classRefCacheDriver.html", "classRefCacheDriver" ],
     [ "SimulatorMemory", "classSimulatorMemory.html", "classSimulatorMemory" ],
     [ "SimulatorMMIO", "classSimulatorMMIO.html", "classSimulatorMMIO" ]
