@@ -221,6 +221,7 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ref Cache simulator, if you hope to drive by cycles, use it. </p>
+<p>class RefCache : public Ref {};</p>
 <p>RefUnitDriver, use a ref class cache simulate the dut logic</p>
 <p>if you hope to drive by cycles, use it as a wrapper of RefUnit, or else, just handle the transactions here </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -275,11 +276,14 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
 </table>
 </div><div class="memdoc">
 <p>reset</p>
+<p>mmio</p>
+<p>check hitness</p>
 <p>miss</p>
 <p>need evict</p>
 <p>fetch data</p>
 <p>write cache</p>
 <p>send response</p>
+<p>refill</p>
 
 <p>Implements <a class="el" href="classMLVP_1_1Driver_1_1DriverModel.html">MLVP::Driver::DriverModel</a>.</p>
 
