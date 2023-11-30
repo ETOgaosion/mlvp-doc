@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setdata_0',['setData',['../classMLVP_1_1Channel_1_1Channel.html#a16fa17a8445e31d923c4292cca65875d',1,'MLVP::Channel::Channel']]],
+  ['setdata_0',['setdata',['../classMLVP_1_1Channel_1_1Channel.html#a6dda4994793f3a8689f4d818b225b49e',1,'MLVP::Channel::Channel::setData(MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse, bool burst, bool isLast)'],['../classMLVP_1_1Channel_1_1Channel.html#aeef077c29824060ab0e4b026fd7724d4',1,'MLVP::Channel::Channel::setData(MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse)']]],
   ['simplebuscmd_1',['SimpleBusCmd',['../main_8cpp.html#a34a78e2c3b9f389d18b63db5a79c6180',1,'main.cpp']]],
   ['simulator_2',['Simulator',['../classMLVP_1_1Simulator_1_1Simulator.html',1,'MLVP::Simulator']]],
   ['simulator_2ecpp_3',['simulator.cpp',['../simulator_8cpp.html',1,'']]],

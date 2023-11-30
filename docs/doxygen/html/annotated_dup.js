@@ -25,7 +25,7 @@ var annotated_dup =
         [ "Evaluator", "classMLVP_1_1Evaluator_1_1Evaluator.html", null ]
       ] ],
       [ "Library", null, [
-        [ "RandomGenerator", "classMLVP_1_1Library_1_1RandomGenerator.html", null ]
+        [ "RandomGenerator", "classMLVP_1_1Library_1_1RandomGenerator.html", "classMLVP_1_1Library_1_1RandomGenerator" ]
       ] ],
       [ "RefPack", null, [
         [ "Ref", "classMLVP_1_1RefPack_1_1Ref.html", "classMLVP_1_1RefPack_1_1Ref" ]

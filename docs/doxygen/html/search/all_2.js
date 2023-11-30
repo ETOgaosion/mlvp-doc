@@ -10,7 +10,8 @@ var searchData=
   ['checkresponseexistence_7',['checkResponseExistence',['../classMLVP_1_1Transaction_1_1Transaction.html#a4779051438427a73c58444096dc2bef9',1,'MLVP::Transaction::Transaction']]],
   ['checktransactionfinish_8',['checktransactionfinish',['../classMLVP_1_1Transaction_1_1Transaction.html#adcb506d4b23d0d0383092fba2365a9c5',1,'MLVP::Transaction::Transaction::checkTransactionFinish()'],['../classMLVP_1_1Transaction_1_1Transaction.html#a09c31a97fc198262a8c58abd4c0992f4',1,'MLVP::Transaction::Transaction::checkTransactionFinish(bool isRef)']]],
   ['clearserialtest_9',['clearSerialTest',['../classMLVP_1_1TestGenerator_1_1PortSpecGeneratorModel.html#ab2655300802082b71f527cac11fa18b8',1,'MLVP::TestGenerator::PortSpecGeneratorModel']]],
-  ['comparerefdut_10',['compareRefDut',['../classMLVP_1_1Transaction_1_1Transaction.html#ad7fdca8902bbbb748d30a773849f1bee',1,'MLVP::Transaction::Transaction']]],
-  ['config_11',['Config',['../classMLVP_1_1Config_1_1Config.html',1,'MLVP::Config']]],
-  ['config_2eh_12',['config.h',['../config_8h.html',1,'']]]
+  ['compareoption_10',['CompareOption',['../classMLVP_1_1Transaction_1_1Transaction.html#a8ab1cda6fe6bb157866a0cf4f8ee9132',1,'MLVP::Transaction::Transaction']]],
+  ['comparerefdut_11',['compareRefDut',['../classMLVP_1_1Transaction_1_1Transaction.html#a402084f6fb95295f1ed096221e4e799a',1,'MLVP::Transaction::Transaction']]],
+  ['config_12',['Config',['../classMLVP_1_1Config_1_1Config.html',1,'MLVP::Config']]],
+  ['config_2eh_13',['config.h',['../config_8h.html',1,'']]]
 ];

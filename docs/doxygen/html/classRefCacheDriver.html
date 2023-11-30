@@ -221,7 +221,8 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ref Cache simulator, if you hope to drive by cycles, use it. </p>
-<p>RefUnitDriver, use a ref class cache simulate the dut logic </p>
+<p>RefUnitDriver, use a ref class cache simulate the dut logic</p>
+<p>if you hope to drive by cycles, use it as a wrapper of RefUnit, or else, just handle the transactions here </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afcb2cf7853d8e592014c5b1329ece964" name="afcb2cf7853d8e592014c5b1329ece964"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcb2cf7853d8e592014c5b1329ece964">&#9670;&#160;</a></span>bytesmask2bitsmask()</h2>
@@ -273,6 +274,7 @@ std::map&lt; std::tuple&lt; std::string, std::string, bool &gt;, std::shared_ptr
   </tr>
 </table>
 </div><div class="memdoc">
+<p>reset</p>
 <p>miss</p>
 <p>need evict</p>
 <p>fetch data</p>

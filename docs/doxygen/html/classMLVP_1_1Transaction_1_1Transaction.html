@@ -120,6 +120,7 @@ $(function(){initNavTree('classMLVP_1_1Transaction_1_1Transaction.html',''); ini
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -138,6 +139,22 @@ Collaboration diagram for MLVP::Transaction::Transaction:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="classMLVP_1_1Transaction_1_1Transaction__coll__graph.svg" width="199" height="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a4965d9566f7adfd28466aed88eb29c79" id="r_a4965d9566f7adfd28466aed88eb29c79"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4965d9566f7adfd28466aed88eb29c79">PrintOption</a> { <b>ALL</b>
+, <b>TOP</b>
+, <b>DUT</b>
+, <b>REF</b>
+ }</td></tr>
+<tr class="memdesc:a4965d9566f7adfd28466aed88eb29c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print Option of <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html" title="Transaction class, which is used to store the information of a transaction.">Transaction</a>.  <a href="#a4965d9566f7adfd28466aed88eb29c79">More...</a><br /></td></tr>
+<tr class="separator:a4965d9566f7adfd28466aed88eb29c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab1cda6fe6bb157866a0cf4f8ee9132" id="r_a8ab1cda6fe6bb157866a0cf4f8ee9132"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ab1cda6fe6bb157866a0cf4f8ee9132">CompareOption</a> { <b>ALL</b>
+, <b>INTER_MODULE</b>
+, <b>TOP</b>
+ }</td></tr>
+<tr class="memdesc:a8ab1cda6fe6bb157866a0cf4f8ee9132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare option for compareRefDut function response index.  <a href="#a8ab1cda6fe6bb157866a0cf4f8ee9132">More...</a><br /></td></tr>
+<tr class="separator:a8ab1cda6fe6bb157866a0cf4f8ee9132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f85e0266ccfe289db671a6085e87fab" id="r_a8f85e0266ccfe289db671a6085e87fab"><td class="memItemLeft" align="right" valign="top"><a id="a8f85e0266ccfe289db671a6085e87fab" name="a8f85e0266ccfe289db671a6085e87fab"></a>
@@ -146,15 +163,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac554e2f6b64cd113e7b8a6f31bc565e3" id="r_ac554e2f6b64cd113e7b8a6f31bc565e3"><td class="memItemLeft" align="right" valign="top"><a id="ac554e2f6b64cd113e7b8a6f31bc565e3" name="ac554e2f6b64cd113e7b8a6f31bc565e3"></a>
 <a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getTransactionID</b> () const</td></tr>
 <tr class="separator:ac554e2f6b64cd113e7b8a6f31bc565e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6be0cf5f29d42574e442ccae5800b2" id="r_a9e6be0cf5f29d42574e442ccae5800b2"><td class="memItemLeft" align="right" valign="top"><a id="a9e6be0cf5f29d42574e442ccae5800b2" name="a9e6be0cf5f29d42574e442ccae5800b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (<a class="el" href="#a4965d9566f7adfd28466aed88eb29c79">PrintOption</a> option)</td></tr>
+<tr class="separator:a9e6be0cf5f29d42574e442ccae5800b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fe56f12254c29bb2c3476635bdcf72c" id="r_a4fe56f12254c29bb2c3476635bdcf72c"><td class="memItemLeft" align="right" valign="top"><a id="a4fe56f12254c29bb2c3476635bdcf72c" name="a4fe56f12254c29bb2c3476635bdcf72c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutSignal</b> (const MLVP::Type::PortsData &amp;inOutSignal, bool fromRef)</td></tr>
 <tr class="separator:a4fe56f12254c29bb2c3476635bdcf72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf60f6330163d1f142e04f7391856f3" id="r_adbf60f6330163d1f142e04f7391856f3"><td class="memItemLeft" align="right" valign="top"><a id="adbf60f6330163d1f142e04f7391856f3" name="adbf60f6330163d1f142e04f7391856f3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutSignal</b> (const std::string &amp;portName, <a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a> data, bool fromRef)</td></tr>
 <tr class="separator:adbf60f6330163d1f142e04f7391856f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab13b9d4a7a033f9f68f1d129af423604" id="r_ab13b9d4a7a033f9f68f1d129af423604"><td class="memItemLeft" align="right" valign="top"><a id="ab13b9d4a7a033f9f68f1d129af423604" name="ab13b9d4a7a033f9f68f1d129af423604"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCycle</b> (int cycles)</td></tr>
-<tr class="separator:ab13b9d4a7a033f9f68f1d129af423604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab84fcfc5ee4901af6f9b7735f852c4de" id="r_ab84fcfc5ee4901af6f9b7735f852c4de"><td class="memItemLeft" align="right" valign="top"><a id="ab84fcfc5ee4901af6f9b7735f852c4de" name="ab84fcfc5ee4901af6f9b7735f852c4de"></a>
 const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getInSignal</b> ()</td></tr>
 <tr class="separator:ab84fcfc5ee4901af6f9b7735f852c4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,18 +181,18 @@ const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a8ae67080cf7a379e2d30c008d0c78c67" id="r_a8ae67080cf7a379e2d30c008d0c78c67"><td class="memItemLeft" align="right" valign="top"><a id="a8ae67080cf7a379e2d30c008d0c78c67" name="a8ae67080cf7a379e2d30c008d0c78c67"></a>
 const MLVP::Type::PortsData &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOutSignal</b> (bool fromRef)</td></tr>
 <tr class="separator:a8ae67080cf7a379e2d30c008d0c78c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06a6b92fd0d7380ac3f3ae4b60e2fdb3" id="r_a06a6b92fd0d7380ac3f3ae4b60e2fdb3"><td class="memItemLeft" align="right" valign="top"><a id="a06a6b92fd0d7380ac3f3ae4b60e2fdb3" name="a06a6b92fd0d7380ac3f3ae4b60e2fdb3"></a>
-<a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCycles</b> () const</td></tr>
-<tr class="separator:a06a6b92fd0d7380ac3f3ae4b60e2fdb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a28129ed98796b3826c81c4690b0550" id="r_a5a28129ed98796b3826c81c4690b0550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a28129ed98796b3826c81c4690b0550">addRequest</a> (const std::string &amp;inSrc, const std::string &amp;inDest, const MLVP::Type::PortsData &amp;inSignal, bool fromRef)</td></tr>
 <tr class="memdesc:a5a28129ed98796b3826c81c4690b0550"><td class="mdescLeft">&#160;</td><td class="mdescRight">recommended method to add a inter-module request  <br /></td></tr>
 <tr class="separator:a5a28129ed98796b3826c81c4690b0550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f9439dc82f308013361150d649a6042" id="r_a3f9439dc82f308013361150d649a6042"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f9439dc82f308013361150d649a6042">addRequest</a> (const std::string &amp;inSrc, const std::string &amp;inDest, bool fromRef)</td></tr>
 <tr class="memdesc:a3f9439dc82f308013361150d649a6042"><td class="mdescLeft">&#160;</td><td class="mdescRight">recommended method to add a inter-module request  <br /></td></tr>
 <tr class="separator:a3f9439dc82f308013361150d649a6042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5990cc88bcd3a1c247bbf54f18fcc6dd" id="r_a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5990cc88bcd3a1c247bbf54f18fcc6dd">addResponse</a> (<a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;req, MLVP::Type::PortsData outSignal, bool fromRef, bool burst)</td></tr>
-<tr class="memdesc:a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">add response to a request  <br /></td></tr>
-<tr class="separator:a5990cc88bcd3a1c247bbf54f18fcc6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb59740b0dec09315b7be347a890d67" id="r_aefb59740b0dec09315b7be347a890d67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefb59740b0dec09315b7be347a890d67">addResponse</a> (<a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;req, MLVP::Type::PortsData outSignal, bool fromRef)</td></tr>
+<tr class="memdesc:aefb59740b0dec09315b7be347a890d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">add response to a request  <br /></td></tr>
+<tr class="separator:aefb59740b0dec09315b7be347a890d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf805eecb3cd1a4b760b342480142ac" id="r_a0bf805eecb3cd1a4b760b342480142ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bf805eecb3cd1a4b760b342480142ac">addResponse</a> (<a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;req, MLVP::Type::PortsData outSignal, bool fromRef, bool burst, bool isLast)</td></tr>
+<tr class="memdesc:a0bf805eecb3cd1a4b760b342480142ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">add response to a request  <br /></td></tr>
+<tr class="separator:a0bf805eecb3cd1a4b760b342480142ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a388d902eb9b1d372d0c8b4c1ee8139b1" id="r_a388d902eb9b1d372d0c8b4c1ee8139b1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a388d902eb9b1d372d0c8b4c1ee8139b1">checkRequest</a> (const std::string &amp;src, const std::string &amp;dest, bool fromRef)</td></tr>
 <tr class="memdesc:a388d902eb9b1d372d0c8b4c1ee8139b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether there is a request from src to dest  <br /></td></tr>
 <tr class="separator:a388d902eb9b1d372d0c8b4c1ee8139b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,9 +226,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>compareRefDutResponse
 <tr class="memitem:ac23ac8a68fe475b3fd2283e6003197ab" id="r_ac23ac8a68fe475b3fd2283e6003197ab"><td class="memItemLeft" align="right" valign="top"><a id="ac23ac8a68fe475b3fd2283e6003197ab" name="ac23ac8a68fe475b3fd2283e6003197ab"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>compareRefDutResponse</b> ()</td></tr>
 <tr class="separator:ac23ac8a68fe475b3fd2283e6003197ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7fdca8902bbbb748d30a773849f1bee" id="r_ad7fdca8902bbbb748d30a773849f1bee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7fdca8902bbbb748d30a773849f1bee">compareRefDut</a> (int type)</td></tr>
-<tr class="memdesc:ad7fdca8902bbbb748d30a773849f1bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare the dut and ref response  <br /></td></tr>
-<tr class="separator:ad7fdca8902bbbb748d30a773849f1bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402084f6fb95295f1ed096221e4e799a" id="r_a402084f6fb95295f1ed096221e4e799a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a402084f6fb95295f1ed096221e4e799a">compareRefDut</a> (<a class="el" href="#a8ab1cda6fe6bb157866a0cf4f8ee9132">CompareOption</a> type)</td></tr>
+<tr class="memdesc:a402084f6fb95295f1ed096221e4e799a"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare the dut and ref response  <br /></td></tr>
+<tr class="separator:a402084f6fb95295f1ed096221e4e799a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -234,7 +251,67 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html" title="Transaction class, which is used to store the information of a transaction.">Transaction</a> class, which is used to store the information of a transaction. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a8ab1cda6fe6bb157866a0cf4f8ee9132" name="a8ab1cda6fe6bb157866a0cf4f8ee9132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab1cda6fe6bb157866a0cf4f8ee9132">&#9670;&#160;</a></span>CompareOption</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a8ab1cda6fe6bb157866a0cf4f8ee9132">MLVP::Transaction::Transaction::CompareOption</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare option for compareRefDut function response index. </p>
+<ul>
+<li>2 for all</li>
+<li>1 for all inter-modules response</li>
+<li>0 for top response </li>
+</ul>
+
+</div>
+</div>
+<a id="a4965d9566f7adfd28466aed88eb29c79" name="a4965d9566f7adfd28466aed88eb29c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4965d9566f7adfd28466aed88eb29c79">&#9670;&#160;</a></span>PrintOption</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a4965d9566f7adfd28466aed88eb29c79">MLVP::Transaction::Transaction::PrintOption</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print Option of <a class="el" href="classMLVP_1_1Transaction_1_1Transaction.html" title="Transaction class, which is used to store the information of a transaction.">Transaction</a>. </p>
+<ul>
+<li>ALL: print all requests and responses, including inter-module and top level</li>
+<li>TOP: only print top signals</li>
+<li>DUT: dut signals</li>
+<li>REF: ref signals </li>
+</ul>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3f9439dc82f308013361150d649a6042" name="a3f9439dc82f308013361150d649a6042"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f9439dc82f308013361150d649a6042">&#9670;&#160;</a></span>addRequest() <span class="overload">[1/2]</span></h2>
 
@@ -330,8 +407,52 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
 
 </div>
 </div>
-<a id="a5990cc88bcd3a1c247bbf54f18fcc6dd" name="a5990cc88bcd3a1c247bbf54f18fcc6dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5990cc88bcd3a1c247bbf54f18fcc6dd">&#9670;&#160;</a></span>addResponse()</h2>
+<a id="aefb59740b0dec09315b7be347a890d67" name="aefb59740b0dec09315b7be347a890d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb59740b0dec09315b7be347a890d67">&#9670;&#160;</a></span>addResponse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transaction::addResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMLVP_1_1Transaction_1_1TransactionReq.html">TransactionReq</a> &amp;&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLVP::Type::PortsData&#160;</td>
+          <td class="paramname"><em>outSignal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fromRef</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>add response to a request </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>recommand to pass raw request, notice that we use reference only to avoid copy overhead, but we cannot promise that user will use raw request </td></tr>
+    <tr><td class="paramname">outSignal</td><td>response port - data signal </td></tr>
+    <tr><td class="paramname">fromRef</td><td>whether the response is from 0 - dut or 1 - ref </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0bf805eecb3cd1a4b760b342480142ac" name="a0bf805eecb3cd1a4b760b342480142ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf805eecb3cd1a4b760b342480142ac">&#9670;&#160;</a></span>addResponse() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +479,13 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>burst</em>&#160;</td>
+          <td class="paramname"><em>burst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isLast</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -374,6 +501,8 @@ std::map&lt; std::pair&lt; std::string, std::string &gt;, std::vector&lt; std::p
     <tr><td class="paramname">req</td><td>recommand to pass raw request, notice that we use reference only to avoid copy overhead, but we cannot promise that user will use raw request </td></tr>
     <tr><td class="paramname">outSignal</td><td>response port - data signal </td></tr>
     <tr><td class="paramname">fromRef</td><td>whether the response is from 0 - dut or 1 - ref </td></tr>
+    <tr><td class="paramname">burst</td><td>use burst mode to add several responses </td></tr>
+    <tr><td class="paramname">isLast</td><td>whether the response is the last one </td></tr>
   </table>
   </dd>
 </dl>
@@ -593,8 +722,8 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="ad7fdca8902bbbb748d30a773849f1bee" name="ad7fdca8902bbbb748d30a773849f1bee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7fdca8902bbbb748d30a773849f1bee">&#9670;&#160;</a></span>compareRefDut()</h2>
+<a id="a402084f6fb95295f1ed096221e4e799a" name="a402084f6fb95295f1ed096221e4e799a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402084f6fb95295f1ed096221e4e799a">&#9670;&#160;</a></span>compareRefDut()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,7 +731,7 @@ false </dd></dl>
         <tr>
           <td class="memname">bool Transaction::compareRefDut </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="#a8ab1cda6fe6bb157866a0cf4f8ee9132">CompareOption</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
