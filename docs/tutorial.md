@@ -92,7 +92,7 @@ MLVP将提供对两者使用友好的框架和工具
 
 ## Usage
 
-本项目提供了使用模板：根目录下[templates/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/template/main.cpp)，根据需求替换以Your提示的用户定义模块，填充逻辑即可，将新文件放在[src/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/src/main.cpp)，以`cmake`的方式编译运行即可，这部分可参考[Quick Start](./index.md#Quick-Start)
+本项目提供了使用模板：根目录下[templates/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/templates/main.cpp)，根据需求替换以Your提示的用户定义模块，填充逻辑即可，将新文件放在[src/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/src/main.cpp)，以`cmake`的方式编译运行即可，这部分可参考[Quick Start](./index.md#Quick-Start)
 
 具体的每步操作说明可以参考模板或已经提供的[src/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/src/main.cpp)
 
