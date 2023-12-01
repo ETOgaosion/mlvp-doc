@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Simulator Memory and MMIO.">
+<g id="a_Node000001"><a xlink:title="Simulator Memory and MMIO, Notice that Ref and Dut reuse same Simulator class.">
 <polygon fill="#999999" stroke="#666666" points="126.5,-19 22.5,-19 22.5,0 126.5,0 126.5,-19"/>
 <text text-anchor="middle" x="74.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">SimulatorMemory</text>
 </a>

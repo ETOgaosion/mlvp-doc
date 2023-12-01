@@ -33,19 +33,19 @@ date: 2023-11-01
 ./bin/build.sh
 
 # check raw system verilog file
-cat design/Memory/memory.sv
+cat design/NutshellCache/nutshellcache.sv
 
 # run test
 ./bin/mlvp
 
 # check total result
-cat report/memory/total.info
+cat report/cache/total.info
 
 # check coverage of system verilog loc
-cat report/memory/memory.sv
+cat report/cache/cache.sv
 
 # check vcd waveform
-gtkwave log/memory/Driver0/memory.vcd
+gtkwave log/cache/Driver0/cache.vcd
 ```
 
 在以上步骤中我们完成了编译、验证目标查看、执行、结果查看，成功完成了一个简单的UT验证流程，获取到正确与否的验证结果和代码覆盖率报告。
@@ -62,4 +62,4 @@ gtkwave log/memory/Driver0/memory.vcd
 
 ## API Reference
 
-本项目使用doxygen构建基于注释的API查询的文档，请参阅[API文档](./doxygen/html/index.html)
+本项目重要函数都已添加完善注释，若想学习本项目可以试着帮助完善注释，本项目使用doxygen构建基于注释的API查询的文档，请参阅[API文档](./doxygen/html/index.html)

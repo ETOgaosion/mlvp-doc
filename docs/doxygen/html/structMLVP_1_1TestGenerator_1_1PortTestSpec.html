@@ -129,12 +129,12 @@ $(function(){initNavTree('structMLVP_1_1TestGenerator_1_1PortTestSpec.html','');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a28c99111738868cf7ebf161a59f73b78" id="r_a28c99111738868cf7ebf161a59f73b78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28c99111738868cf7ebf161a59f73b78">PortTestSpec</a> (std::string inPortName, int inStartIndex, int inEndIndex, GeneratorType inGeneratorType, MLVP::Type::SerialData inValue)</td></tr>
-<tr class="memdesc:a28c99111738868cf7ebf161a59f73b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Port Test Spec object.  <br /></td></tr>
-<tr class="separator:a28c99111738868cf7ebf161a59f73b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad819dc44a17c640a588ae2254a816f96" id="r_ad819dc44a17c640a588ae2254a816f96"><td class="memItemLeft" align="right" valign="top"><a id="ad819dc44a17c640a588ae2254a816f96" name="ad819dc44a17c640a588ae2254a816f96"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PortTestSpec</b> (std::string inPortName, int inStartIndex, int inEndIndex, GeneratorType inGeneratorType, MLVP::Type::SerialData inValue, std::optional&lt; std::function&lt; bool(<a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>)&gt; &gt; inConstrain, std::optional&lt; std::function&lt; <a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>(<a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>)&gt; &gt; inPostHandler)</td></tr>
-<tr class="separator:ad819dc44a17c640a588ae2254a816f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4adc3d8b8a96b2176c68fde0cc53cb23" id="r_a4adc3d8b8a96b2176c68fde0cc53cb23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4adc3d8b8a96b2176c68fde0cc53cb23">PortTestSpec</a> (std::string inPortName, int inStartIndex, int inEndIndex, GeneratorType inGeneratorType, MLVP::Type::SerialData inValue, bool isBitWidth)</td></tr>
+<tr class="memdesc:a4adc3d8b8a96b2176c68fde0cc53cb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Port Test Spec object.  <br /></td></tr>
+<tr class="separator:a4adc3d8b8a96b2176c68fde0cc53cb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a0516ed233c152454adfdd9e592ae6" id="r_a50a0516ed233c152454adfdd9e592ae6"><td class="memItemLeft" align="right" valign="top"><a id="a50a0516ed233c152454adfdd9e592ae6" name="a50a0516ed233c152454adfdd9e592ae6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PortTestSpec</b> (std::string inPortName, int inStartIndex, int inEndIndex, GeneratorType inGeneratorType, MLVP::Type::SerialData inValue, bool isBitWidth, std::optional&lt; std::function&lt; bool(<a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>)&gt; &gt; inConstrain, std::optional&lt; std::function&lt; <a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>(<a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>)&gt; &gt; inPostHandler)</td></tr>
+<tr class="separator:a50a0516ed233c152454adfdd9e592ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -164,8 +164,8 @@ std::function&lt; <a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a7501
 <tr class="separator:ac86dd78c21ca93c63b97725a66db9d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a28c99111738868cf7ebf161a59f73b78" name="a28c99111738868cf7ebf161a59f73b78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28c99111738868cf7ebf161a59f73b78">&#9670;&#160;</a></span>PortTestSpec()</h2>
+<a id="a4adc3d8b8a96b2176c68fde0cc53cb23" name="a4adc3d8b8a96b2176c68fde0cc53cb23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4adc3d8b8a96b2176c68fde0cc53cb23">&#9670;&#160;</a></span>PortTestSpec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +201,13 @@ std::function&lt; <a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a7501
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">MLVP::Type::SerialData&#160;</td>
-          <td class="paramname"><em>inValue</em>&#160;</td>
+          <td class="paramname"><em>inValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isBitWidth</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -17,19 +17,19 @@ date: 2023-11-01
 ./bin/build.sh
 
 # check raw system verilog file
-cat design/Memory/memory.sv
+cat design/NutshellCache/nutshellcache.sv
 
 # run test
 ./bin/mlvp
 
 # check total result
-cat report/memory/total.info
+cat report/cache/total.info
 
 # check coverage of system verilog loc
-cat report/memory/memory.sv
+cat report/cache/cache.sv
 
 # check vcd waveform
-gtkwave log/memory/Driver0/memory.vcd
+gtkwave log/cache/Driver0/cache.vcd
 ```
 
 在以上步骤中我们完成了编译、验证目标查看、执行、结果查看，成功完成了一个简单的UT验证流程，获取到正确与否的验证结果和代码覆盖率报告。
@@ -44,7 +44,7 @@ gtkwave log/memory/Driver0/memory.vcd
 
 ### 实施
 
-在OVIP-UT项目`src/cpp`中添加实现，可参考`tb_memory.cpp`的实现，在OVIP-UT项目主目录执行：
+在OVIP-UT项目[templates/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/template/main.cpp)中添加实现，可参考现有实现，在OVIP-UT项目主目录执行：
 
 ```sh
 ./mlvp/scripts/build.sh

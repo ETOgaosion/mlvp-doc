@@ -25,6 +25,11 @@ date: 2023-11-01
         - VMWare
         - VirtualBox
 - Shell: zsh [recommanded]
+- IDE:
+    - 若使用VSCode，推荐使用clangd插件，获得和JetBrains CLion同等效果的代码检查和参数查看功能，
+    - 若使用VS，推荐Resharper插件
+    - Rider
+    - CLion
 
 ## Dependencies Installation
 

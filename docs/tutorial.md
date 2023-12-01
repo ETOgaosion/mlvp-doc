@@ -19,7 +19,7 @@ MLVP将提供对两者使用友好的框架和工具
 
 ## MLVP Framework and Project Structure
 
-### Framework
+### Framework and Definations
 
 当前版本MLVP框架如下：
 
@@ -28,18 +28,28 @@ MLVP将提供对两者使用友好的框架和工具
 由框架图可知，MLVP框架由六个重要组件构成：
 
 - `Database`(`Databuffer`): 内存数据库/缓冲区，辅助多模块交互，完成数据解藕
-- `Sequencer`: 整合用户输入测试样例
+- `Transaction`: 由用户测试样例准备事务数据库，测试以事务形式承载，一个测试节点（线程）运行一个测试序列，其中包含多个事务
     - `userTests`: [Verifier] 测试样例用户输入
         - `TestGenerator`: [Verifier] 使用API生成测试样例
-- `Transaction`: 由用户测试样例准备事务数据库
+- `Channel`: 作为组件之间通信的管道，组件通过管道传输事务、以及不视为事务的信息，构建时每个组件之间、dut组件和ref对应组件之间都已经添加管道，基本组件为`Dut/RefUnitDriver, SimulatorDriver`，若其子实例也需要使用`Channel`，也可以将`shared_ptr`向其传递
 - `Spreader`: 根据测试序列的并行性要求发射事物给驱动线程
 - `Driver`: 驱动模块，最重要的设计
     - `Driver`: 顶层Driver模块，同时驱动DUT和REF线程完成测试，屏蔽DUT与REF的不同接口
-    - `DutDriver`: [Announcer] 驱动DUT的模块，将DUT运行函数进行一层抽象，屏蔽不同DUT的接口与设计细节
-        - `DUT`: [Announcer] 待测单元模块
-    - `RefDriver`: [Announcer] 驱动REF的模块，将REF运行函数进行一层抽象，屏蔽不同REF的接口与设计细节
-        - `Ref`: [Verifier] 用户高级语言实现模块参考模型
-    - `resultAnalyser`: 评估测试输出，相当于UVM Scoreboard
+    - `DriverModel`: 所有驱动模块的父类，为统一接口而生
+    - `TransDriverModel`: 以事务形式驱动下层基于时钟驱动的Driver，由于Dut/Ref的事务驱动Driver行为接近，因此提取公共部分称为该父类
+        - `DutTransDriver/RefTransDriver`，但设一层cycleDriver目前不必要，直接将底层模块的Driver按照cycle来处理即可
+            - `DutUnitDriver`: [Announcer] 驱动DUT的模块，将DUT运行函数进行一层抽象，屏蔽不同DUT的接口与设计细节
+                - `DUT`: [Announcer] 待测单元模块
+            - `RefUnitDriver`: [Verifier] 驱动REF的模块，将REF运行函数进行一层抽象，屏蔽不同REF的接口与设计细节
+                - `Ref`: [Verifier] 用户高级语言实现模块参考模型
+            - `SimulatorDriver`: [V/A] `Simulator`定义见下方`Simulator`组件，用户/发布者实现对`Simulator`进行事务/时钟驱动
+- `Simulator`: [V/A] 此模块的出现是为了解决当待测模块单元可能有其他依赖模块的情况，比如`Cache`模块依赖`Memory`，我们称此时用户需要**模拟**依赖模块，实现依赖模块的模拟器，模拟器继承自`Simulator`类，主要实现`exec`方法供驱动使用，完成事务级功能模拟
+- `Evaluator`: 用户可自定义事务dut/ref的比较方式，用户通过事务结果信号来判断是否符合要求
+- `Utility`: 一些整合功能的工具
+    - `GlobalTimer`: 本框架还实现了全局时钟，在多线程以及异步的情况下使得时钟能够同步，本框架提供两种方式：
+        - `GlobalMachineTimer`: 基于系统时钟，固定时钟时长
+        - `GlobalUserTimer`: 用户可自定义时钟时间增加的位置，通常适用于DutDriver按拍来设计时用户需要其他组件按照Dut的Cycle同步的情况，方便时钟对齐
+    - `RandomGenerator`: 全局随机数生成器，基于C++ `mt19937`和`uniform`分布
 - `Reporter`: 整合`Driver`输出的中间结果，对不同模拟器的结果分析方法进行封装，通过配置完成正确调用
 
 ### Project Structure
@@ -51,13 +61,11 @@ MLVP将提供对两者使用友好的框架和工具
 |-- assets                  // Project static resources
 |-- bin                     // Binaries output
 |-- config                  // Configuration in json
-|-- data                    // User generate tests in json
+|-- design
 |-- doc                     // Documentaion
 |-- include                 // Header files, same structure with sources
 |   `-- MCVPack                 // DUT header files [component]
 |       `-- BareDut
-|           |-- Memory
-|           `-- Mux
 |-- log                     // Middle output
 |   `-- memory                  // Module name
 |       |-- Driver0                 // Driver threads output, waveforms are here
@@ -65,12 +73,14 @@ MLVP将提供对两者使用友好的框架和工具
 |   `-- memory                  // Module name, coverage reports are here
 |-- scripts                 // Scripts help automation
 |-- src                     // Cpp sources
+|   |-- Channel                 // Channel between Drivers
 |   |-- Config                  // Configuration parser
 |   |-- Database                // Database structure
-|   |-- Driver                  // Driver [component]
+|   |-- Drivers                 // Drivers [component]
+|   |-- Evaluator               // Evaluators [component]
 |   |-- Library                 // Library functions
 |   |-- Reporter                // Reporter [component]
-|   |-- Sequencer               // Sequencer [component]
+|   |-- Simulator               // Simulator [component]
 |   |-- Spreader                // Spreader [component]
 |   |-- TestGenerator           // Generate tests multi-language tools
 |   `-- Transaction             // Transaction [component]
@@ -80,84 +90,15 @@ MLVP将提供对两者使用友好的框架和工具
 `-- tools                   // Neccessary tools for automation
 ```
 
-## Methodology
+## Usage
 
-MLVP的方法学理论与UVM类似：根本目的是利用高度并行化的高效验证手段完成代码全覆盖单元测试，但具体任务与UVM截然不同，为两组用户便利，必须保证框架具有对所有单元测试的适用性，且API具有最佳的用户易用性
+本项目提供了使用模板：根目录下[templates/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/template/main.cpp)，根据需求替换以Your提示的用户定义模块，填充逻辑即可，将新文件放在[src/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/src/main.cpp)，以`cmake`的方式编译运行即可，这部分可参考[Quick Start](./index.md#Quick-Start)
 
-MLVP验证方法学如下：
-
-### 角色任务
-
-#### Announcer
-
-- 完成测试的添加，完成测试需求的编写
-- 框架的生成
-- DUT Driver的实现
-    - 由于接口间交互和输入模式的复杂性，暂不支持自动生成，待需求明确后会列入Feature Requests
-
-#### Verifier
-
-- 阅读测试需求
-- 依照REF接口编写高级语言的Reference Model
-- 利用`TestGenerator`API编写测试输入
-- 运行测试，不断提高覆盖率、减小测试消耗时间
-
-目前仅支持C++接口，其他语言API开发中
-
-#### MVP System
-
-> MVP, Multi-language Verification Platform
-
-- 用户得分模型：
-    - 正确结果：综合覆盖率结果和测试时间，以这两项指标评判测试的全面性和性能
-        - 若有更好设计，提Issue [Design Improvement]，得分$\times M$
-        - 直接提交Pull Request [Design Improvement]，得分$\times N$
-    - 错误结果：
-        - 用户Reference Model本身有Bug，不得分
-        - 用户Reference Model无误，与正确结果最高得分相同
-        - 提Issue [Bug Solution]，主动提出修正方法，得分$\times M$
-        - 直接提交Pull Request [Bug Solution]修正代码，得分$\times N$
-- 反馈模型：系统自动及时通知设计人员错误设计和性能结果
-
-### 实施步骤
-
-1. [Announcer] 明确测试需求，将测试单元放入`design/[TestModule]`，在配置中输入测试单元名称和顶层模块
-    - 暂时不支持配置
-2. [Announcer] 项目根目录运行verilator头文件生成脚本`./script/gencode.sh`
-    - Verilog头文件生成并放入`include/MCVPack/BareDut/[TestModule]`
-3. [Announcer] 项目根目录运行RefDrivers/Ref接口生成脚本`python3 tools/generatePortsInfo.py`
-    - 生成顶层模块接口信息放入`include/Database/designPortsGen.h`
-4. [Announcer] 根据模块运行逻辑编写DUT Driver类，继承自`DutUnitDriver`(位于`include/Drivers/dutUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`DutMemoryDriver`，并且参考[Verilator Example](https://github.com/verilator/verilator/tree/master/examples)
-    - 核心：实现`bool drivingStep() {}`函数，对DUT接口硬赋值
-5. [Verifier] 根据硬件描述和实现，使用高级语言编写Reference Model，继承自`Ref`类(位于`include/RefPack/ref.h`)，放在`src/main.cpp`中
-    - 核心：实现`void exec() {}`函数
-5. [Verifier] 根据硬件描述和实现，编写Ref Driver类，继承自`RefUnitDriver`类(位于`include/Drivers/refUnitDriver.h`)，放在`src/main.cpp`中，Driver的编写参考文件中`RefMemoryDriver`
-    - 核心：实现`void drivingStep() {}`函数
-7. [Verifier] 根据TestGenerator [API规范](#test-generator-api-tutorial)，在`src/main.cpp`主函数中编写测试样例
-5. [Verifier] 在`src/main.cpp`主函数中完成整个框架组件的连接，可参考现有文件
-8. [Verifier] 提交运行程序，生成正确性、覆盖率和性能报告，返回5进行优化或Debug
-9. [System] 向设计人员反馈结果
-
-在OVIP-UT主目录下执行`./mlvp/scripts/build.sh`，即可编译生成文件
+具体的每步操作说明可以参考模板或已经提供的[src/main.cpp](https://gitee.com/yaozhicheng/mlvp/blob/master/src/main.cpp)
 
 ### Test Generator API Tutorial
 
 #### C++
-
-本项目设计了三种测试生成模型：Direct Input Model, Random Generator Model, PortSpec Generator Model，对应生成三种不同类型的输入，第三种是前两种模式的混合，最为灵活
-
-##### Direct Input Model
-
-API:
-
-```cpp
-bool addSerialTest(MLVP::Type::SerialTest testSet);
-bool addTestPoint(MLVP::Type::TestPoint test);
-```
-
-分别对应输入二维测试序列的数据，和一维测试点的数据
-
-维度使用`std::vector`，数据类型`unsigned long long`
 
 ##### Random Generator Model
 
@@ -185,7 +126,10 @@ struct PortTestSpec {
     int startIndex;
     int endIndex;
     GeneratorType generatorType;
-    std::vector<unsigned long long> value;
+    MLVP::Type::Data maxVal;                                            // 用户输入可只传入bitwidth，输入进行转换后此处会存放真正上限值
+    MLVP::Type::SerialData value;                                       // 若用户直接输入，则使用该项作为测试值，若该项size = 1，则[startIndex, endIndex]内全部使用该值，若用户使用随机模式，通过该项传入随机最大值限定
+    std::function<bool(MLVP::Type::Data)> constrain;                    // 该项针对随机数生成，确保生成结果符合条件，但该方法很低效，不满足条件的随机数会不断重新生成
+    std::function<MLVP::Type::Data(MLVP::Type::Data)> postHandler;      // 巧妙使用value和postHandler是高效的随机数产生方法，能够取代constrain生成良好随机数
 
     PortTestSpec(std::string inPortName, int inStartIndex, int inEndIndex, GeneratorType inGeneratorType) : portName(inPortName), startIndex(inStartIndex), endIndex(inEndIndex), generatorType(inGeneratorType) {}
     ~PortTestSpec() = default;
@@ -208,9 +152,8 @@ enum class GeneratorType {
 API:
 
 ```cpp
-bool addPortTestSpec(PortTestSpec portTestSpec);
-bool addPortTestSpec(std::string portName, int startIndex, int endIndex, GeneratorType generatorType);
-bool addPortTestSpec(std::string portName, int startIndex, int endIndex, GeneratorType generatorType, std::vector<unsigned long long> value);
+bool addPortTestSpec(std::string portName, int startIndex, int endIndex, GeneratorType generatorType, const MLVP::Type::SerialData &value, bool isBitWidth);
+bool addPortTestSpec(std::string portName, int startIndex, int endIndex, GeneratorType generatorType, const MLVP::Type::SerialData &value, bool isBitWidth, std::optional<std::function<bool(MLVP::Type::Data)>> inConstrain, std::optional<std::function<MLVP::Type::Data(MLVP::Type::Data)>> inPostHandler);
 
 void generateSerialTest(bool autoclear = true);
 void clearSerialTest();
@@ -218,5 +161,5 @@ void clearSerialTest();
 
 Verifier应使用`addPortTestSpec`对端口值信息按照测试点进行填充，而后使用`generateSerialTest`生成最终的测试样例，clear的作用是generate完成后清楚上一步生成内容，也可以在此基础上继续添加
 
-使用参考`tools/TestGenerator/src/main.cpp`
+使用参考[TestGenerator/generatorHelper.h](https://gitee.com/yaozhicheng/mlvp/blob/master/include/TestGenerator/generatorHelper.h)
 

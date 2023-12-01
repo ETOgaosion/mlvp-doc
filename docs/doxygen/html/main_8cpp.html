@@ -126,15 +126,7 @@ $(function(){initNavTree('main_8cpp.html',''); initResizable(); });
   <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="channel_8h_source.html">Channel/channel.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="driverModel_8h_source.html">Drivers/driverModel.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="simulatorDriver_8h_source.html">Drivers/simulatorDriver.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="evaluate_8h_source.html">Evaluator/evaluate.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="types_8h_source.html">Library/types.h</a>&quot;</code><br />
-<code>#include &quot;Library/utils.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="reporter_8h_source.html">Reporter/reporter.h</a>&quot;</code><br />
-<code>#include &quot;Transaction/transaction.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="mlvp_8h_source.html">mlvp.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="mlvp_8h_source.html">mlvp.h</a>&quot;</code><br />
 <code>#include &quot;MCVPack/BareDut/NutshellCache/Vnutshellcache.h&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
@@ -160,7 +152,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ref Cache simulator, if you hope to drive by cycles, use it.  <a href="classRefCacheDriver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulatorMemory.html">SimulatorMemory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulator Memory and MMIO.  <a href="classSimulatorMemory.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulator Memory and MMIO, Notice that Ref and Dut reuse same Simulator class.  <a href="classSimulatorMemory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSimulatorMMIO.html">SimulatorMMIO</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,7 +202,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:aaf4952a971edf0cfb8ac817288239b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">We recommend you use a function cache encapsulation your tests generation.  <br /></td></tr>
 <tr class="separator:aaf4952a971edf0cfb8ac817288239b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb1f431176254d0aa27c474e3a32fa04" id="r_aeb1f431176254d0aa27c474e3a32fa04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb1f431176254d0aa27c474e3a32fa04">registerEvaluator</a> ()</td></tr>
-<tr class="memdesc:aeb1f431176254d0aa27c474e3a32fa04"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use a function cache register evaluators as you need.  <br /></td></tr>
+<tr class="memdesc:aeb1f431176254d0aa27c474e3a32fa04"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use a function to register evaluators as you need.  <br /></td></tr>
 <tr class="separator:aeb1f431176254d0aa27c474e3a32fa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -329,7 +321,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>You can use a function cache register evaluators as you need. </p>
+<p>You can use a function to register evaluators as you need. </p>
 <p>user top need not cache be evaluated memory evaluator</p>
 <p>mmio evaluator is not needed</p>
 
