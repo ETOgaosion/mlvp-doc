@@ -100,18 +100,6 @@ MLVP将提供对两者使用友好的框架和工具
 
 #### C++
 
-##### Random Generator Model
-
-API:
-
-```cpp
-bool addTestPoint();
-bool addSerialTest(int testNum);
-bool addSerialTestsSet(std::vector<int> serialTestSize);
-```
-
-分别对应测试点、测试序列、整个测试集的随机生成
-
 ##### PortSpec Generator Model
 
 ![PortSpec](./img/MLVP_PortSpec.png)
