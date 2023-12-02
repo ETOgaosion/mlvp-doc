@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setdata_0',['setdata',['../classMLVP_1_1Channel_1_1Channel.html#a6dda4994793f3a8689f4d818b225b49e',1,'MLVP::Channel::Channel::setData(MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse, bool burst, bool isLast)'],['../classMLVP_1_1Channel_1_1Channel.html#aeef077c29824060ab0e4b026fd7724d4',1,'MLVP::Channel::Channel::setData(MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse)']]],
+  ['setdata_0',['setdata',['../classMLVP_1_1Channel_1_1Channel.html#a00a6e3320639a6265e42fca761835834',1,'MLVP::Channel::Channel::setData(MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse, bool burst, bool isLast, bool useThreads)'],['../classMLVP_1_1Channel_1_1Channel.html#a44cedcd8926dc815979aed92075e20aa',1,'MLVP::Channel::Channel::setData(MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse, bool useThreads)']]],
   ['setunittimeinterval_1',['setunittimeinterval',['../classMLVP_1_1Library_1_1GlobalMachineTimer.html#a43906467af0b18114705cbbded388f7c',1,'MLVP::Library::GlobalMachineTimer::setUnitTimeInterval(int inUnitTimeInterval, bool force)'],['../classMLVP_1_1Library_1_1GlobalMachineTimer.html#a9d020ba2d3feeefbac05100733a263ef',1,'MLVP::Library::GlobalMachineTimer::setUnitTimeInterval(int inUnitTimeInterval)']]],
   ['simplebuscmd_2',['SimpleBusCmd',['../main_8cpp.html#a34a78e2c3b9f389d18b63db5a79c6180',1,'main.cpp']]],
   ['simulator_3',['Simulator',['../classMLVP_1_1Simulator_1_1Simulator.html',1,'MLVP::Simulator']]],

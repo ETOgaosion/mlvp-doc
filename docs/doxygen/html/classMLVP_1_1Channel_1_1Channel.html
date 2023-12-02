@@ -139,6 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacc44905455b17f49eb21b77782287f0" id="r_aacc44905455b17f49eb21b77782287f0"><td class="memItemLeft" align="right" valign="top"><a id="aacc44905455b17f49eb21b77782287f0" name="aacc44905455b17f49eb21b77782287f0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr>
 <tr class="separator:aacc44905455b17f49eb21b77782287f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c2105e46c2cdb4cd8a82cae8ae502c" id="r_ab1c2105e46c2cdb4cd8a82cae8ae502c"><td class="memItemLeft" align="right" valign="top"><a id="ab1c2105e46c2cdb4cd8a82cae8ae502c" name="ab1c2105e46c2cdb4cd8a82cae8ae502c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="separator:ab1c2105e46c2cdb4cd8a82cae8ae502c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9d3f4f5e5c4e2084a8f633bbe004134" id="r_af9d3f4f5e5c4e2084a8f633bbe004134"><td class="memItemLeft" align="right" valign="top"><a id="af9d3f4f5e5c4e2084a8f633bbe004134" name="af9d3f4f5e5c4e2084a8f633bbe004134"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFromRef</b> ()</td></tr>
 <tr class="separator:af9d3f4f5e5c4e2084a8f633bbe004134"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,21 +151,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransaction</b> (s
 <tr class="memitem:a47bd031a29abef916ccca337a3cb8401" id="r_a47bd031a29abef916ccca337a3cb8401"><td class="memItemLeft" align="right" valign="top"><a id="a47bd031a29abef916ccca337a3cb8401" name="a47bd031a29abef916ccca337a3cb8401"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasData</b> (const std::string &amp;inName)</td></tr>
 <tr class="separator:a47bd031a29abef916ccca337a3cb8401"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef077c29824060ab0e4b026fd7724d4" id="r_aeef077c29824060ab0e4b026fd7724d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef077c29824060ab0e4b026fd7724d4">setData</a> (MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse)</td></tr>
-<tr class="separator:aeef077c29824060ab0e4b026fd7724d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dda4994793f3a8689f4d818b225b49e" id="r_a6dda4994793f3a8689f4d818b225b49e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dda4994793f3a8689f4d818b225b49e">setData</a> (MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse, bool burst, bool isLast)</td></tr>
-<tr class="separator:a6dda4994793f3a8689f4d818b225b49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a220a2885a10c4c5ffac0f830a3ef39cc" id="r_a220a2885a10c4c5ffac0f830a3ef39cc"><td class="memItemLeft" align="right" valign="top"><a id="a220a2885a10c4c5ffac0f830a3ef39cc" name="a220a2885a10c4c5ffac0f830a3ef39cc"></a>
-<a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (const std::string &amp;inName, bool &amp;exist)</td></tr>
+<tr class="memitem:a44cedcd8926dc815979aed92075e20aa" id="r_a44cedcd8926dc815979aed92075e20aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44cedcd8926dc815979aed92075e20aa">setData</a> (MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse, bool useThreads)</td></tr>
+<tr class="separator:a44cedcd8926dc815979aed92075e20aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a6e3320639a6265e42fca761835834" id="r_a00a6e3320639a6265e42fca761835834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00a6e3320639a6265e42fca761835834">setData</a> (MLVP::Type::PortsData inData, bool toTransaction, bool inIsResponse, bool burst, bool isLast, bool useThreads)</td></tr>
+<tr class="memdesc:a00a6e3320639a6265e42fca761835834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Data object.  <br /></td></tr>
+<tr class="separator:a00a6e3320639a6265e42fca761835834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220a2885a10c4c5ffac0f830a3ef39cc" id="r_a220a2885a10c4c5ffac0f830a3ef39cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a220a2885a10c4c5ffac0f830a3ef39cc">getData</a> (const std::string &amp;inName, bool &amp;exist)</td></tr>
+<tr class="memdesc:a220a2885a10c4c5ffac0f830a3ef39cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Data object.  <br /></td></tr>
 <tr class="separator:a220a2885a10c4c5ffac0f830a3ef39cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2b754e3029026f00bba08f494c2664" id="r_a5c2b754e3029026f00bba08f494c2664"><td class="memItemLeft" align="right" valign="top"><a id="a5c2b754e3029026f00bba08f494c2664" name="a5c2b754e3029026f00bba08f494c2664"></a>
+MLVP::Type::PortsData&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (const std::vector&lt; std::string &gt; &amp;inNames, bool &amp;exist)</td></tr>
+<tr class="separator:a5c2b754e3029026f00bba08f494c2664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
 class MLVP::Channel::Channel&lt; T &gt;</div><p><a class="el" href="classMLVP_1_1Channel_1_1Channel.html" title="Channel is a message middleware between components, as a proxy message handler.">Channel</a> is a message middleware between components, as a proxy message handler. </p>
 <p>All Channels are single way, if you need double way, register a reverse <a class="el" href="classMLVP_1_1Channel_1_1Channel.html" title="Channel is a message middleware between components, as a proxy message handler.">Channel</a> please </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aeef077c29824060ab0e4b026fd7724d4" name="aeef077c29824060ab0e4b026fd7724d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeef077c29824060ab0e4b026fd7724d4">&#9670;&#160;</a></span>setData() <span class="overload">[1/2]</span></h2>
+<a id="a220a2885a10c4c5ffac0f830a3ef39cc" name="a220a2885a10c4c5ffac0f830a3ef39cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220a2885a10c4c5ffac0f830a3ef39cc">&#9670;&#160;</a></span>getData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,22 +180,16 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMLVP_1_1Channel_1_1Channel.html">MLVP::Channel::Channel</a>&lt; T &gt;::setData </td>
+          <td class="memname"><a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511">MLVP::Type::Data</a> <a class="el" href="classMLVP_1_1Channel_1_1Channel.html">MLVP::Channel::Channel</a>&lt; T &gt;::getData </td>
           <td>(</td>
-          <td class="paramtype">MLVP::Type::PortsData&#160;</td>
-          <td class="paramname"><em>inData</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>inName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>toTransaction</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>inIsResponse</em>&#160;</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>exist</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -202,14 +203,22 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Notice that merge will not cover the raw elements, so we need to reverse</p>
-<p>sync start response thread</p>
-<p>wait for response, just stall for some cycles, wait for data income</p>
+
+<p>Get the Data object. </p>
+<p><b>Notice that this fetch function can only deal with one port, if you need to sync multiple ports, use function below</b> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inName</td><td></td></tr>
+    <tr><td class="paramname">syncMode</td><td>whether use sync mode to sync data read and write </td></tr>
+    <tr><td class="paramname">exist</td><td>return value, get whether the data exist </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="types_8h.html#a4bc56d3624a37e060343d0a750188511" title="All port data support maximum 64 bits, if you need more, please split into multiple wire ports.">MLVP::Type::Data</a> </dd></dl>
 
 </div>
 </div>
-<a id="a6dda4994793f3a8689f4d818b225b49e" name="a6dda4994793f3a8689f4d818b225b49e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dda4994793f3a8689f4d818b225b49e">&#9670;&#160;</a></span>setData() <span class="overload">[2/2]</span></h2>
+<a id="a00a6e3320639a6265e42fca761835834" name="a00a6e3320639a6265e42fca761835834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a6e3320639a6265e42fca761835834">&#9670;&#160;</a></span>setData() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +256,80 @@ template&lt;class T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isLast</em>&#160;</td>
+          <td class="paramname"><em>isLast</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThreads</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Data object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inData</td><td></td></tr>
+    <tr><td class="paramname">toTransaction</td><td>whether the data is set to transaction </td></tr>
+    <tr><td class="paramname">inIsResponse</td><td>whather set transaction response, or request </td></tr>
+    <tr><td class="paramname">burst</td><td>use burst mode to add multiple data later </td></tr>
+    <tr><td class="paramname">isLast</td><td>is last element of burst mode </td></tr>
+    <tr><td class="paramname">useThreads</td><td>use threads to spawn responser, <b>dut can use this, but if you use transaction mode ref, make sure this option is false</b> </td></tr>
+    <tr><td class="paramname">syncMode</td><td>use sync mode to synchronize data read and write </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Notice that merge will not cover the raw elements, so we need to reverse</p>
+<p>sync start response thread</p>
+<p>wait for response, just stall for some cycles, wait for data income</p>
+
+</div>
+</div>
+<a id="a44cedcd8926dc815979aed92075e20aa" name="a44cedcd8926dc815979aed92075e20aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44cedcd8926dc815979aed92075e20aa">&#9670;&#160;</a></span>setData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMLVP_1_1Channel_1_1Channel.html">MLVP::Channel::Channel</a>&lt; T &gt;::setData </td>
+          <td>(</td>
+          <td class="paramtype">MLVP::Type::PortsData&#160;</td>
+          <td class="paramname"><em>inData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>toTransaction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inIsResponse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThreads</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

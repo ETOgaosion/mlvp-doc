@@ -159,11 +159,17 @@ $(function(){initNavTree('ref_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="classMLVP_1_1RefPack_1_1Ref.html">Ref</a>(std::string inName, ChannelsType &amp;inChannels, std::shared_ptr&lt;MLVP::Transaction::Transaction&gt; inTransaction) : name(std::move(inName)), channels(inChannels), <a class="code hl_variable" href="classMLVP_1_1RefPack_1_1Ref.html#a915882584b0cb9ac95f157174ebb0fe4">transaction</a>(std::move(inTransaction)) {}</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> exec() = 0;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> resetChannels() {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; it : channels) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            it.second-&gt;reset();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> exec() = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace MLVP::RefPack</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace MLVP::RefPack</span></div>
 <div class="ttc" id="achannel_8h_html"><div class="ttname"><a href="channel_8h.html">channel.h</a></div></div>
 <div class="ttc" id="aclassMLVP_1_1RefPack_1_1Ref_html"><div class="ttname"><a href="classMLVP_1_1RefPack_1_1Ref.html">MLVP::RefPack::Ref</a></div><div class="ttdoc">Use only when you want to implement a ref driven by cycles, transaction handler logic implemented in ...</div><div class="ttdef"><b>Definition</b> ref.h:32</div></div>
 <div class="ttc" id="aclassMLVP_1_1RefPack_1_1Ref_html_a915882584b0cb9ac95f157174ebb0fe4"><div class="ttname"><a href="classMLVP_1_1RefPack_1_1Ref.html#a915882584b0cb9ac95f157174ebb0fe4">MLVP::RefPack::Ref::transaction</a></div><div class="ttdeci">std::shared_ptr&lt; MLVP::Transaction::Transaction &gt; transaction</div><div class="ttdoc">&lt;dest name, Channel&lt;DriverModel&gt;&gt;</div><div class="ttdef"><b>Definition</b> ref.h:38</div></div>
