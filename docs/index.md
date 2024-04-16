@@ -19,7 +19,7 @@ date: 2023-11-01
 快速安装：在项目根目录运行
 
 ```sh
-./scripts/prepare.md
+./scripts/prepare.sh
 ```
 
 ## Quick Start
@@ -30,7 +30,7 @@ date: 2023-11-01
 
 ```sh
 # build file
-./bin/build.sh
+./scripts/build.sh
 
 # check raw system verilog file
 cat design/NutshellCache/nutshellcache.sv
