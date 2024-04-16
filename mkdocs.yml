@@ -3,7 +3,7 @@ site_url: http://mlvp-doc.readthedocs.io/
 site_description: Multi-language Verilation Methodology Framework Documentation
 site_author: BlueSpace, BOSC
 
-repo_url: https://gitee.com/beifengzhishen955/mlvp-doc
+repo_url: https://github.com/ETOgaosion/mlvp-doc
 edit_uri: blob/main/docs/
 
 theme:
